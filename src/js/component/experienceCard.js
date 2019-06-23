@@ -9,15 +9,15 @@ export const ExperienceCard = props => {
 	const [editMode, setEditMode] = useState(false);
 
 	const [title, setTitle] = useState(props.title);
-	if (props.title != title) setTitle(props.title);
 	const [company, setCompany] = useState(props.company);
-	if (props.company != company) setCompany(props.company);
 	const [description, setDescription] = useState(props.description);
-	if (props.description != description) setDescription(props.description);
 	const [fromDate, setFromDate] = useState(props.fromDate);
-	if (props.fromDate != fromDate) setFromDate(props.fromDate);
 	const [toDate, setToDate] = useState(props.toDate);
-	if (props.toDate != toDate) setToDate(props.toDate);
+	// if (props.title != title) setTitle(props.title);
+	// if (props.company != company) setCompany(props.company);
+	// if (props.description != description) setDescription(props.description);
+	// if (props.fromDate != fromDate) setFromDate(props.fromDate);
+	// if (props.toDate != toDate) setToDate(props.toDate);
 
 	return (
 		<div className="card mt-2 bg-light">

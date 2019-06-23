@@ -102,7 +102,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 				}
 			],
 			education: [
-				/*{
+				{
 					id: 1,
 					school: "FIU",
 					degree: "Computer Science",
@@ -119,7 +119,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					fromDate: "05/01/2019",
 					toDate: "09/01/2019",
 					resume: "true"
-				}*/
+				}
 			],
 			product: [
 				{
