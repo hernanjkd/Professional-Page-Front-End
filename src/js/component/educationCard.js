@@ -102,19 +102,15 @@ export const EducationCard = props => {
 							<input
 								className="display-inline-block"
 								type="checkbox"
-								onChange={e =>
-									actions.selectResumePage("education", "resume", props.index, e.target.checked)
-								}
 								checked={props.resume === "true" ? "checked" : ""}
+								onChange={() => {
+									let resume = props.resume === "true" ? "false" : "true";
+									actions.editEducation();
+								}}
 							/>
 							Resume
 							{editMode ? (
-								<button
-									className="btn btn-info float-right"
-									onClick={() =>
-										alert(`School: ${school}\nCompany: ${course}\nDescription: ${degree}
-												\nFrom Date: ${fromDate}`)
-									}>
+								<button className="btn btn-info float-right" onClick={() => actions.editEducation()}>
 									Save
 								</button>
 							) : (
@@ -129,7 +125,7 @@ export const EducationCard = props => {
 };
 
 EducationCard.propTypes = {
-	index: PropTypes.number,
+	id: PropTypes.number,
 	degree: PropTypes.string,
 	school: PropTypes.string,
 	course: PropTypes.string,

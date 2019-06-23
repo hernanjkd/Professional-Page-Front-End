@@ -25,7 +25,7 @@ export const SkillCard = props => {
 						size="37"
 						type="text"
 						value={skill}
-						onChange={e => setSkill(e.target.value)}
+						onChange={({ target: { value: v } }) => setSkill(v)}
 					/>
 				) : (
 					<h5 className="card-title text-center">{skill}</h5>
@@ -39,27 +39,27 @@ export const SkillCard = props => {
 							<input
 								className="display-inline-block"
 								type="checkbox"
-								onChange={e =>
-									actions.selectResumePage("skills", "resume", props.index, e.target.checked)
-								}
 								checked={props.resume === "true" ? "checked" : ""}
+								onChange={() => {
+									let resume = props.resume === "true" ? "false" : "true";
+									actions.editSkill(props.id, skill, resume, props.page);
+								}}
 							/>
 							Resume
 							<input
 								className="ml-4 display-inline-block"
 								type="checkbox"
-								onChange={({ target: { checked } }) =>
-									actions.selectResumePage("skills", "page", props.index, checked)
-								}
 								checked={props.page === "true" ? "checked" : ""}
+								onChange={() => {
+									let page = props.page === "true" ? "false" : "true";
+									actions.editSkill(props.id, skill, props.resume, page);
+								}}
 							/>
 							Page
 							{editMode ? (
 								<button
 									className="btn btn-info float-right"
-									onClick={
-										() => alert(`Skill: ${skill}`) //\nResume: ${resume}\nPage: ${page}`)
-									}>
+									onClick={() => actions.editSkill(props.id, skill, props.resume, props.page)}>
 									Save
 								</button>
 							) : (
@@ -74,7 +74,7 @@ export const SkillCard = props => {
 };
 
 SkillCard.propTypes = {
-	index: PropTypes.string,
+	id: PropTypes.number,
 	skill: PropTypes.string,
 	resume: PropTypes.string,
 	page: PropTypes.string

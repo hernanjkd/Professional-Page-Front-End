@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import "../../styles/resume.scss";
-import "../../styles/index.scss";
+import React from "react";
 import { Context } from "../store/appContext";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -74,14 +72,17 @@ export const Resume = () => {
 								})}
 								<h4>Education</h4>
 								{edu.map((item, index) => {
-									<div className="mt-3" key={index}>
-										<i className="dates float-right">
-											{formatDate(new Date(item.fromDate))} - {formatDate(new Date(item.toDate))}
-										</i>
-										<h5>{item.degree}</h5>
-										<h6>{item.school}</h6>
-										<p>{item.course}</p>
-									</div>;
+									return (
+										<div className="mt-3" key={index}>
+											<i className="dates float-right">
+												{formatDate(new Date(item.fromDate))} -{" "}
+												{formatDate(new Date(item.toDate))}
+											</i>
+											<h5>{item.degree}</h5>
+											<h6>{item.school}</h6>
+											<p>{item.course}</p>
+										</div>
+									);
 								})}
 							</div>
 						</div>

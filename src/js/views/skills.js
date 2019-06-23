@@ -8,6 +8,12 @@ export const Skills = () => {
 	const [resume, setResume] = useState(false);
 	const [page, setPage] = useState(false);
 
+	const clearFields = () => {
+		setSkill("");
+		setResume(false);
+		setPage(false);
+	};
+
 	return (
 		<Context.Consumer>
 			{({ store, actions }) => {
@@ -29,24 +35,31 @@ export const Skills = () => {
 									className="display-inline-block"
 									type="checkbox"
 									checked={resume ? "checked" : ""}
-									onClick={() => setResume(!resume)}
+									onClick={() => setResume(resume === "true" ? "false" : "true")}
 								/>
 								Resume
 								<input
 									className="ml-4 display-inline-block"
 									type="checkbox"
 									checked={page ? "checked" : ""}
-									onClick={() => setPage(!page)}
+									onClick={() => setPage(page === "true" ? "false" : "true")}
 								/>
 								Page
-								<button className="btn btn-info float-right">Save</button>
+								<button
+									className="btn btn-info float-right"
+									onClick={() => {
+										clearFields();
+										actions.addSkill(skill, resume, page, store.user.id);
+									}}>
+									Save
+								</button>
 							</div>
 						</div>
 						{store.skills.map((item, index) => {
 							return (
 								<SkillCard
 									key={index}
-									index={index}
+									id={item.id}
 									skill={item.skill}
 									resume={item.resume}
 									page={item.page}

@@ -14,6 +14,16 @@ export const Experiences = () => {
 	const [resume, setResume] = useState(false);
 	const [page, setPage] = useState(false);
 
+	const clearFields = () => {
+		setTitle("");
+		setCompany("");
+		setDescription("");
+		setFromDate(null);
+		setToDate(null);
+		setResume(false);
+		setPage(false);
+	};
+
 	return (
 		<div className="container">
 			<div className="card mt-2 bg-light">
@@ -89,7 +99,8 @@ export const Experiences = () => {
 							return (
 								<button
 									className="btn btn-info float-right"
-									onClick={() =>
+									onClick={() => {
+										clearFields();
 										actions.addExperience(
 											title,
 											company,
@@ -99,8 +110,8 @@ export const Experiences = () => {
 											resume,
 											page,
 											store.user.id
-										)
-									}>
+										);
+									}}>
 									Save
 								</button>
 							);
@@ -110,12 +121,11 @@ export const Experiences = () => {
 			</div>
 			<Context.Consumer>
 				{({ store }) => {
-					console.log(store);
 					return store.experience.map((item, index) => {
 						return (
 							<ExperienceCard
 								key={index}
-								index={index}
+								id={item.id}
 								title={item.title}
 								company={item.company}
 								description={item.description}

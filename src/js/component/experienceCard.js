@@ -97,28 +97,57 @@ export const ExperienceCard = props => {
 							<input
 								className="display-inline-block"
 								type="checkbox"
-								onChange={e =>
-									actions.selectResumePage("experiences", "resume", props.index, e.target.checked)
-								}
 								checked={props.resume === "true" ? "checked" : ""}
+								onChange={() => {
+									let resume = props.resume === "true" ? "false" : "true";
+									actions.editExperience(
+										props.id,
+										title,
+										company,
+										description,
+										fromDate,
+										toDate,
+										resume,
+										props.page
+									);
+								}}
 							/>
 							Resume
 							<input
 								className="ml-4 display-inline-block"
 								type="checkbox"
-								onChange={({ target: { checked } }) =>
-									actions.selectResumePage("experiences", "page", props.index, checked)
-								}
 								checked={props.page === "true" ? "checked" : ""}
+								onChange={() => {
+									let page = props.page === "true" ? "false" : "true";
+									actions.editExperience(
+										props.id,
+										title,
+										company,
+										description,
+										fromDate,
+										toDate,
+										props.resume,
+										page
+									);
+								}}
 							/>
 							Page
 							{editMode ? (
 								<button
 									className="btn btn-info float-right"
-									onClick={() =>
-										alert(`Title: ${title}\nCompany: ${company}\nDescription: ${description}
-												\nFrom Date: ${fromDate}`)
-									}>
+									onClick={() => {
+										setEditMode(!editMode);
+										actions.editExperience(
+											props.id,
+											title,
+											company,
+											description,
+											fromDate,
+											toDate,
+											props.resume,
+											props.page
+										);
+									}}>
 									Save
 								</button>
 							) : (
@@ -133,12 +162,12 @@ export const ExperienceCard = props => {
 };
 
 ExperienceCard.propTypes = {
-	index: PropTypes.number,
 	title: PropTypes.string,
 	company: PropTypes.string,
 	description: PropTypes.string,
 	fromDate: PropTypes.string,
 	toDate: PropTypes.string,
 	resume: PropTypes.string,
-	page: PropTypes.string
+	page: PropTypes.string,
+	id: PropTypes.number
 };

@@ -13,6 +13,15 @@ export const Education = () => {
 	const [toDate, setToDate] = useState("");
 	const [resume, setResume] = useState(false);
 
+	const clearFields = () => {
+		setDegree("");
+		setSchool("");
+		setCourse("");
+		setFromDate(null);
+		setToDate(null);
+		setResume(false);
+	};
+
 	return (
 		<div className="container">
 			<div className="card mt-2 bg-light">
@@ -71,17 +80,24 @@ export const Education = () => {
 					<input
 						className="display-inline-block"
 						type="checkbox"
-						checked={resume ? "checked" : ""}
+						checked={resume === "true" ? "checked" : ""}
 						onChange={() => setResume(resume === "true" ? "false" : "true")}
 					/>
 					Resume
-					<button
-						className="btn btn-info float-right"
-						onClick={() =>
-							alert(`Title: ${title}\nSchool: ${School}\nCourse: ${Course}\nResume: ${resume}`)
-						}>
-						Save
-					</button>
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return (
+								<button
+									className="btn btn-info float-right"
+									onClick={() => {
+										clearFields();
+										actions.addEducation();
+									}}>
+									Save
+								</button>
+							);
+						}}
+					</Context.Consumer>
 				</div>
 			</div>
 			<Context.Consumer>
@@ -90,14 +106,13 @@ export const Education = () => {
 						return (
 							<EducationCard
 								key={index}
-								index={index}
+								id={item.id}
 								degree={item.degree}
 								school={item.school}
 								course={item.course}
 								fromDate={item.fromDate}
 								toDate={item.toDate}
 								resume={item.resume}
-								page={item.page}
 							/>
 						);
 					});

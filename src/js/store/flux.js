@@ -1,5 +1,3 @@
-import { url } from "./url.js";
-
 const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
@@ -18,6 +16,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			},
 			experience: [
 				{
+					id: 1,
 					title: "Programmer",
 					company: "4 Geeks Academy",
 					description: "Worked as a programmer using React and Flask.",
@@ -27,6 +26,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					page: "false"
 				},
 				{
+					id: 2,
 					title: "Restaurant Manager",
 					company: "Centerplate",
 					description:
@@ -37,6 +37,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					page: "false"
 				},
 				{
+					id: 3,
 					title: "Car Washer",
 					company: "Clean Clean Cars",
 					description: "Cleaned cars the best way that anyone can.",
@@ -46,6 +47,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					page: "true"
 				},
 				{
+					id: 4,
 					title: "Warehouse Manager",
 					company: "Bill Hansen's Catering",
 					description: "Organized events and employees.",
@@ -57,36 +59,42 @@ const getState = ({ getStore, setStore, getActions }) => {
 			],
 			skills: [
 				{
+					id: 1,
 					skill: "JavaScript",
 					level: 7,
 					resume: "true",
 					page: "true"
 				},
 				{
+					id: 2,
 					skill: "PHP",
 					level: 5,
 					resume: "false",
 					page: "true"
 				},
 				{
+					id: 3,
 					skill: "Java",
 					level: 5,
 					resume: "false",
 					page: "true"
 				},
 				{
+					id: 4,
 					skill: "Scheme",
 					level: 5,
 					resume: "false",
 					page: "false"
 				},
 				{
+					id: 5,
 					skill: "React",
 					level: 5,
 					resume: "true",
 					page: "true"
 				},
 				{
+					id: 6,
 					skill: "Python",
 					level: 3,
 					resume: "true",
@@ -95,6 +103,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			],
 			education: [
 				{
+					id: 1,
 					school: "FIU",
 					degree: "Computer Science",
 					course: "JavaScript Programming",
@@ -103,6 +112,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					resume: "true"
 				},
 				{
+					id: 2,
 					school: "4 Geeks Academy",
 					degree: "Full Stack Developer",
 					course: "React, Flask",
@@ -113,6 +123,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			],
 			product: [
 				{
+					id: 1,
 					description: null,
 					date: null,
 					url: null,
@@ -121,15 +132,17 @@ const getState = ({ getStore, setStore, getActions }) => {
 			],
 			about: [
 				{
+					id: 1,
 					description:
-						"I really enjoy coding and helping out others, my favorite subject to read is about aliens and other civilizations.\nThis is just some writing so we can see how it looks when there is a good amount of context. Maybe I can create some more content to fill up.",
+						"I really enjoy coding and helping out others, my favorite subject to read is about aliens and other civilizations.<br>This is just some writing so we can see how it looks when there is a good amount of context. Maybe I can create some more content to fill up.",
 					resume: "true",
-					page: "false"
+					page: "true"
 				},
 				{
+					id: 2,
 					description: "Another about me section in case I want a different one in the resume from the page.",
 					resume: "false",
-					page: "true"
+					page: "false"
 				}
 			],
 			purpose: [
@@ -149,8 +162,17 @@ const getState = ({ getStore, setStore, getActions }) => {
 			]
 		},
 		actions: {
+			changeDisplay: () => {
+				//get the store
+				const store = getStore();
+				const updatedUser = store.user;
+
+				updatedUser.display = store.user.display === "objective" ? "about" : "objective";
+
+				setStore({ user: updatedUser });
+			},
 			getTable: tableName => {
-				fetch(url + "/" + tableName)
+				fetch(process.env.HOST + "/" + tableName)
 					.then(response => response.json())
 					.then(data => {
 						const store = getStore();
@@ -158,9 +180,9 @@ const getState = ({ getStore, setStore, getActions }) => {
 						setStore({ store });
 					});
 			},
-
 			addExperience: (title, company, description, fromDate, toDate, resume, page, user_id) => {
-				fetch(url + "/experience", {
+				const store = getStore();
+				fetch(process.env.HOST + "/experience", {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -174,16 +196,107 @@ const getState = ({ getStore, setStore, getActions }) => {
 						user_id: user_id
 					})
 				}).then(() => {
-					const actions = getActions();
-					actions.getTable("experience");
+					fetch(process.env.HOST + "/experience")
+						.then(response => response.json())
+						.then(data => {
+							store.experience = data;
+							setStore({ store });
+						});
 				});
 			},
-
-			selectResumePage: (obj, resumeORpage, index, value) => {
-				let store = getStore();
-				store[obj][index][resumeORpage] = String(value);
-				setStore({ store });
-			}
+			editExperience: (id, title, company, description, fromDate, toDate, resume, page) => {
+				const store = getStore();
+				fetch(process.env.HOST + "/experience/" + id, {
+					method: "put",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						id: id,
+						title: title,
+						company: company,
+						description: description,
+						fromDate: fromDate,
+						toDate: toDate,
+						resume: resume,
+						page: page
+					})
+				}).then(() => {
+					fetch(process.env.HOST + "/experience")
+						.then(response => response.json())
+						.then(data => {
+							store.experience = data;
+							setStore({ store });
+						});
+				});
+			},
+			deleteExperience: id => {
+				const store = getStore();
+				fetch(process.env.HOST + "/experience/" + id, {
+					method: "delete"
+				}).then(() => {
+					fetch(process.env.HOST + "/experience")
+						.then(response => response.json())
+						.then(data => {
+							store.experience = data;
+							setStore({ store });
+						});
+				});
+			},
+			addSkill: (skill, resume, page, user_id) => {
+				const store = getStore();
+				fetch(process.env.HOST + "/skills", {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						skill: skill,
+						resume: resume,
+						page: page,
+						user_id: user_id
+					})
+				}).then(() => {
+					fetch(process.env.HOST + "/skills")
+						.then(response => response.json())
+						.then(data => {
+							store.skills = data;
+							setStore({ store });
+						});
+				});
+			},
+			editSkill: (id, skill, resume, page) => {
+				const store = getStore();
+				fetch(process.env.HOST + "/skills/" + id, {
+					method: "put",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						id: id,
+						skill: skill,
+						resume: resume,
+						page: page
+					})
+				}).then(() => {
+					fetch(process.env.HOST + "/skills")
+						.then(response => response.json())
+						.then(data => {
+							store.skills = data;
+							setStore({ store });
+						});
+				});
+			},
+			deleteSkill: id => {
+				const store = getStore();
+				fetch(process.env.HOST + "/skills/" + id, {
+					method: "delete"
+				}).then(() => {
+					fetch(process.env.HOST + "/skills")
+						.then(response => response.json())
+						.then(data => {
+							store.skills = data;
+							setStore({ store });
+						});
+				});
+			},
+			addEducation: () => {},
+			editEducation: () => {},
+			deleteEducation: () => {}
 		}
 	};
 };

@@ -19,7 +19,7 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			this.state.actions.getTable("experience");
+			// this.state.actions.getTable("experience");
 		}
 
 		render() {

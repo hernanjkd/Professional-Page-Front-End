@@ -1,0 +1,35 @@
+.navBar {
+    height: 30px;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+}
+.navBar a {
+    display: inline;
+    color: black;
+    margin-right: 30px;
+}
+.navBar a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.projectsRow {
+    padding-top: 130px;
+}
+
+.projects {
+    width: 15rem;
+    background-color: rgb(214, 214, 214);
+}
+.projects img{
+    height: 145px;
+}
+.projects card-body{
+    height: 150;
+}
+
+.imgshadow {
+    box-shadow: 5px 5px 5px black;
+}
