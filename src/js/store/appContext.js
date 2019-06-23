@@ -19,7 +19,13 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			// this.state.actions.getTable("experience");
+			fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
+				.then(response => response.json())
+				.then(data => {
+					let { store } = this.state;
+					store.education = data;
+					this.setState({ store });
+				});
 		}
 
 		render() {

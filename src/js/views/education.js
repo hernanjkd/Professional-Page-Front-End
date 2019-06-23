@@ -91,7 +91,15 @@ export const Education = () => {
 									className="btn btn-info float-right"
 									onClick={() => {
 										clearFields();
-										actions.addEducation();
+										actions.addEducation(
+											school,
+											degree,
+											course,
+											fromDate,
+											toDate,
+											resume,
+											store.user.id
+										);
 									}}>
 									Save
 								</button>

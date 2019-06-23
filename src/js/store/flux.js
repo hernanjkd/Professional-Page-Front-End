@@ -2,7 +2,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
 			user: {
-				id: 17,
+				id: 1,
 				firstName: "Hernan",
 				lastName: "Garcia",
 				email: "hernan.garcia@gmail.com",
@@ -102,7 +102,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 				}
 			],
 			education: [
-				{
+				/*{
 					id: 1,
 					school: "FIU",
 					degree: "Computer Science",
@@ -119,7 +119,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					fromDate: "05/01/2019",
 					toDate: "09/01/2019",
 					resume: "true"
-				}
+				}*/
 			],
 			product: [
 				{
@@ -294,9 +294,66 @@ const getState = ({ getStore, setStore, getActions }) => {
 						});
 				});
 			},
-			addEducation: () => {},
-			editEducation: () => {},
-			deleteEducation: () => {}
+			addEducation: (school, degree, course, fromDate, toDate, resume, user_id) => {
+				const store = getStore();
+				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education", {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						school: school,
+						degree: degree,
+						course: course,
+						fromDate: fromDate,
+						toDate: toDate,
+						resume: resume,
+						user_id: user_id
+					})
+				}).then(() => {
+					fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
+						.then(response => response.json())
+						.then(data => {
+							store.education = data;
+							setStore({ store });
+						});
+				});
+			},
+			editEducation: (id, school, degree, course, fromDate, toDate, resume, user_id) => {
+				const store = getStore();
+				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education/" + id, {
+					method: "put",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						id: id,
+						school: school,
+						degree: degree,
+						course: course,
+						fromDate: fromDate,
+						toDate: toDate,
+						resume: resume,
+						user_id
+					})
+				}).then(() => {
+					fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
+						.then(response => response.json())
+						.then(data => {
+							store.education = data;
+							setStore({ store });
+						});
+				});
+			},
+			deleteEducation: id => {
+				const store = getStore();
+				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education/" + id, {
+					method: "delete"
+				}).then(() => {
+					fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
+						.then(response => response.json())
+						.then(data => {
+							store.education = data;
+							setStore({ store });
+						});
+				});
+			}
 		}
 	};
 };
