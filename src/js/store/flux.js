@@ -98,6 +98,34 @@ const getState = ({ getStore, setStore, getActions }) => {
 					level: 3,
 					resume: "true",
 					page: "false"
+				},
+				{
+					id: 6,
+					skill: "Git",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "HTML",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "Bootstrap",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "CSS",
+					level: 3,
+					resume: "true",
+					page: "false"
 				}
 			],
 			education: [
@@ -353,15 +381,31 @@ const getState = ({ getStore, setStore, getActions }) => {
 						});
 				});
 			},
+<<<<<<< HEAD
 			addUser: (firstname, lastname, email, password) => {
 				fetch("https://3000-b7a14a66-7552-47d8-a842-617740f3b9d5.ws-us0.gitpod.io/user", {
+=======
+			addUser: (firstname, lastname, email, password, dobDate, resumeStyle, theme, title, user_id) => {
+				const store = getStore();
+				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education", {
+>>>>>>> 583c066c8cf1103ea020aebc0c7301de0e7b5516
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						firstname: firstname,
 						lastname: lastname,
 						email: email,
+<<<<<<< HEAD
 						password: password
+=======
+						password: password,
+						dobDate: dobDate,
+						imageURL: imageURL,
+						resumeStyle: resumeStyle,
+						theme: theme,
+						title: title,
+						user_id: user_id
+>>>>>>> 583c066c8cf1103ea020aebc0c7301de0e7b5516
 					})
 				})
 					.then(response => response.json())
