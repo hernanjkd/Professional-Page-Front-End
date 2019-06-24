@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Context } from "../store/appContext";
 
 export const Registration = () => {
+	const [email, setEmail] = useState("");
+
 	return (
 		<div className="bg-white">
 			<div className="container-fluid">
@@ -10,72 +13,84 @@ export const Registration = () => {
 						<div className="panel panel-primary">
 							<div className="panel-heading pb-3">Thank you for Signing Up!</div>
 							<div className="panel-body">
-								<form role="Form" method="post" action="" acceptCharset="UTF-8">
-									<div className="form-group">
-										<label htmlFor="fname">First Name</label>
-										<input
-											type="text"
-											id="fname"
-											className="form-control"
-											name="fname"
-											placeholder="Example: John"
-										/>
-									</div>
-									<div className="form-group">
-										<label htmlFor="lname">Last Name</label>
-										<input
-											type="text"
-											id="lname"
-											className="form-control"
-											name="lname"
-											placeholder="Example: Doe"
-										/>
-									</div>
-									<div className="form-group">
-										<label htmlFor="birthDate">Date of Birth*</label>
+								<div className="form-group">
+									<label htmlFor="fname">First Name</label>
+									<input
+										type="text"
+										id="fname"
+										className="form-control"
+										name="fname"
+										placeholder="Example: John"
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="lname">Last Name</label>
+									<input
+										type="text"
+										id="lname"
+										className="form-control"
+										name="lname"
+										placeholder="Example: Doe"
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="birthDate">Date of Birth*</label>
 
-										<input type="date" id="birthDate" className="form-control" />
-									</div>
-									<div className="form-group">
-										<label htmlFor="emailaddr">Email Address</label>
-										<input
-											type="text"
-											id="emailaddr"
-											className="form-control"
-											name="email"
-											placeholder="Example: john.doe@gmail.com"
-										/>
-									</div>
-									<div className="form-group">
-										<label htmlFor="password">Password</label>
-										<input
-											type="password"
-											id="password"
-											className="form-control"
-											name="password"
-											placeholder=""
-										/>
-									</div>
-									<div className="form-group">
-										<label htmlFor="verifypass">Verify Password</label>
-										<input
-											type="password"
-											id="confirmpass"
-											className="form-control"
-											name="verifypass"
-											placeholder=""
-										/>
-									</div>
-									<div className="form-group text-center">
-										<button
-											type="submit"
-											className="btn btn-primary btn-lg"
-											id="submitbtn"
-											name="submit">
-											Sign up!
-										</button>
-									</div>
-								</form>
+									<input type="date" id="birthDate" className="form-control" />
+								</div>
+								<div className="form-group">
+									<label htmlFor="emailaddr">Email Address</label>
+									<input
+										type="text"
+										id="emailaddr"
+										className="form-control"
+										name="email"
+										placeholder="Example: john.doe@gmail.com"
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="password">Password</label>
+									<input
+										type="password"
+										id="password"
+										className="form-control"
+										name="password"
+										placeholder=""
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="verifypass">Verify Password</label>
+									<input
+										type="password"
+										id="confirmpass"
+										className="form-control"
+										name="verifypass"
+										placeholder=""
+									/>
+								</div>
+								<div className="form-group text-center">
+									<Context.Consumer>
+										{({ actions }) => {
+											return (
+												<button
+													type="submit"
+													className="btn btn-primary btn-lg"
+													id="submitbtn"
+													name="submit"
+													onClick={() => {
+														actions.addUser(
+															"firstname",
+															"lastname",
+															document.querySelector("[name=email]").value,
+															"password"
+														);
+													}}>
+													Sign up!
+												</button>
+											);
+										}}
+									</Context.Consumer>
+								</div>
 							</div>
 						</div>
 					</div>

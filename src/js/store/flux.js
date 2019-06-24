@@ -353,33 +353,24 @@ const getState = ({ getStore, setStore, getActions }) => {
 						});
 				});
 			},
-            	addUser: (firstname, lastname, email, password, dobDate, resumeStyle, theme, title, user_id) => {
-				const store = getStore();
-				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education", {
+			addUser: (firstname, lastname, email, password) => {
+				fetch("https://3000-b7a14a66-7552-47d8-a842-617740f3b9d5.ws-us0.gitpod.io/user", {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						firstname: firstname,
 						lastname: lastname,
 						email: email,
-						password: password,
-						dobDate: dobDate,
-						imageURL: imageURL,
-                        resumeStyle: resumeStyle,
-                        theme: theme,
-                        title: title,
-						user_id: user_id
+						password: password
 					})
-				}).then(() => {
-					fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
-						.then(response => response.json())
-						.then(data => {
-							store.user = data;
-							setStore({ store });
-						});
-				});
+				})
+					.then(response => response.json())
+					.then(data => {
+						const store = getStore();
+						store = data;
+						setStore({ store });
+					});
 			}
-
 		}
 	};
 };

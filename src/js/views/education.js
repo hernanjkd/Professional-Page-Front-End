@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/index.scss";
 import { Context } from "../store/appContext";
 import { EducationCard } from "../component/educationCard";
