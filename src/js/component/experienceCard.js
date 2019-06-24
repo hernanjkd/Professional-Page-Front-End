@@ -1,23 +1,28 @@
 import React, { useState } from "react";
-import "../../styles/index.scss";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export const ExperienceCard = props => {
+	const [saveCard, setSaveCard] = useState(false);
 	const [editMode, setEditMode] = useState(false);
-
 	const [title, setTitle] = useState(props.title);
 	const [company, setCompany] = useState(props.company);
 	const [description, setDescription] = useState(props.description);
 	const [fromDate, setFromDate] = useState(props.fromDate);
 	const [toDate, setToDate] = useState(props.toDate);
-	// if (props.title != title) setTitle(props.title);
-	// if (props.company != company) setCompany(props.company);
-	// if (props.description != description) setDescription(props.description);
-	// if (props.fromDate != fromDate) setFromDate(props.fromDate);
-	// if (props.toDate != toDate) setToDate(props.toDate);
+
+	useEffect(
+		() => {
+			if (props.title != title) setTitle(props.title);
+			if (props.company != company) setCompany(props.company);
+			if (props.description != description) setDescription(props.description);
+			if (props.fromDate != fromDate) setFromDate(props.fromDate);
+			if (props.toDate != toDate) setToDate(props.toDate);
+		},
+		[saveCard]
+	);
 
 	return (
 		<div className="card mt-2 bg-light">
@@ -64,8 +69,7 @@ export const ExperienceCard = props => {
 				</div>
 				{editMode ? (
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						value={title}
 						onChange={({ target: { value: v } }) => setTitle(v)}
@@ -75,8 +79,7 @@ export const ExperienceCard = props => {
 				)}
 				{editMode ? (
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						value={company}
 						onChange={e => setCompany(e.target.value)}
@@ -85,7 +88,12 @@ export const ExperienceCard = props => {
 					<h6 className="card-title text-center">{company}</h6>
 				)}
 				{editMode ? (
-					<textarea rows="3" cols="36" onChange={e => setDescription(e.target.value)} value={description} />
+					<textarea
+						className="input-field m-1"
+						rows="3"
+						onChange={e => setDescription(e.target.value)}
+						value={description}
+					/>
 				) : (
 					<p className="card-text text-left">{description}</p>
 				)}
@@ -137,6 +145,7 @@ export const ExperienceCard = props => {
 									className="btn btn-info float-right"
 									onClick={() => {
 										setEditMode(!editMode);
+										setSaveCard(!saveCard);
 										actions.editExperience(
 											props.id,
 											title,

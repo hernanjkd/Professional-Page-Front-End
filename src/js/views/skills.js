@@ -22,8 +22,7 @@ export const Skills = () => {
 						<div className="card mt-2 bg-light">
 							<div className="card-body">
 								<input
-									className="m-1"
-									size="37"
+									className="input-field m-1"
 									type="text"
 									placeholder="Skill"
 									value={skill}
