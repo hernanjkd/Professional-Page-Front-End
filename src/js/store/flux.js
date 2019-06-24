@@ -6,10 +6,9 @@ const getState = ({ getStore, setStore, getActions }) => {
 				firstName: "Hernan",
 				lastName: "Garcia",
 				email: "hernan.garcia@gmail.com",
-				dob: "5/30/80",
-				phone: "(305)878-3294",
-				image_url: "http://lorempixel.com/300/400/nature/2",
-				resume_style: null,
+				dobDate: "5/30/80",
+				imageURL: "http://lorempixel.com/300/400/nature/2",
+				resumeStyle: null,
 				theme: null,
 				title: "Software Engineer",
 				display: "objective"
@@ -353,7 +352,34 @@ const getState = ({ getStore, setStore, getActions }) => {
 							setStore({ store });
 						});
 				});
+			},
+            	addUser: (firstname, lastname, email, password, dobDate, resumeStyle, theme, title, user_id) => {
+				const store = getStore();
+				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education", {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						firstname: firstname,
+						lastname: lastname,
+						email: email,
+						password: password,
+						dobDate: dobDate,
+						imageURL: imageURL,
+                        resumeStyle: resumeStyle,
+                        theme: theme,
+                        title: title,
+						user_id: user_id
+					})
+				}).then(() => {
+					fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education")
+						.then(response => response.json())
+						.then(data => {
+							store.user = data;
+							setStore({ store });
+						});
+				});
 			}
+
 		}
 	};
 };
