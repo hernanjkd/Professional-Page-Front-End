@@ -28,7 +28,7 @@ const views = {
 
 export class Layout extends React.Component {
 	state = {
-		userLoggedIn: false,
+		userLoggedIn: true,
 		left: "education",
 		right: "resume"
 	};
