@@ -98,6 +98,34 @@ const getState = ({ getStore, setStore, getActions }) => {
 					level: 3,
 					resume: "true",
 					page: "false"
+				},
+				{
+					id: 6,
+					skill: "Git",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "HTML",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "Bootstrap",
+					level: 3,
+					resume: "true",
+					page: "false"
+				},
+				{
+					id: 6,
+					skill: "CSS",
+					level: 3,
+					resume: "true",
+					page: "false"
 				}
 			],
 			education: [
@@ -353,7 +381,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 						});
 				});
 			},
-            	addUser: (firstname, lastname, email, password, dobDate, resumeStyle, theme, title, user_id) => {
+			addUser: (firstname, lastname, email, password, dobDate, resumeStyle, theme, title, user_id) => {
 				const store = getStore();
 				fetch("https://3000-ef75842b-b5b0-4bcf-90ef-353ac86333d3.ws-us0.gitpod.io/education", {
 					method: "post",
@@ -365,9 +393,9 @@ const getState = ({ getStore, setStore, getActions }) => {
 						password: password,
 						dobDate: dobDate,
 						imageURL: imageURL,
-                        resumeStyle: resumeStyle,
-                        theme: theme,
-                        title: title,
+						resumeStyle: resumeStyle,
+						theme: theme,
+						title: title,
 						user_id: user_id
 					})
 				}).then(() => {
@@ -379,7 +407,6 @@ const getState = ({ getStore, setStore, getActions }) => {
 						});
 				});
 			}
-
 		}
 	};
 };

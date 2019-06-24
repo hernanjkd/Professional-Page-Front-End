@@ -23,7 +23,7 @@ export class Page extends React.Component {
 
 					// Contains the information for the user title, goals and skills
 					const objective = (
-						<div className="col-5 text-left">
+						<div className="col-5 text-left align-self-center">
 							<h1 className="mb-5">{store.user.title}</h1>
 							<p className="mb-5">{store.user.goal}</p>
 
@@ -62,9 +62,9 @@ export class Page extends React.Component {
 					}
 
 					return (
-						<div className="container m-2 p-0 bg-light">
+						<div className="page container m-2 p-0 bg-light">
 							<nav className="navBar">
-								{name}
+								<a>{name}</a>
 								<a className="nav-link" href="#projects">
 									Projects
 								</a>
@@ -82,7 +82,7 @@ export class Page extends React.Component {
 								<div className="col-1" />
 
 								<div className="col-3">
-									<img className="imgshadow" src={store.user.image_url} alt={name} />
+									<img className="profile-image imgshadow" src={store.user.imageURL} alt={name} />
 								</div>
 								<div className="col-2" />
 
