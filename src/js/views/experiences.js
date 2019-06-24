@@ -55,24 +55,22 @@ export const Experiences = () => {
 						/>
 					</div>
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						placeholder="Title"
 						value={title}
 						onChange={({ target: { value: v } }) => setTitle(v)}
 					/>
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						placeholder="Company"
 						value={company}
 						onChange={({ target: { value } }) => setCompany(value)}
 					/>
 					<textarea
+						className="input-field m-1"
 						rows="3"
-						cols="36"
 						name="description"
 						placeholder="Description"
 						defaultValue={description}

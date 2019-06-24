@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/index.scss";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export const EducationCard = props => {
+	const [saveCard, setSaveCard] = useState(false);
 	const [editMode, setEditMode] = useState(false);
 	const [degree, setDegree] = useState(props.degree);
 	const [school, setSchool] = useState(props.school);
@@ -13,13 +13,16 @@ export const EducationCard = props => {
 	const [fromDate, setFromDate] = useState(props.fromDate);
 	const [toDate, setToDate] = useState(props.toDate);
 
-	// useEffect(() => {
-	// 	if (props.degree != degree) setDegree(props.degree);
-	// 	if (props.school != school) setSchool(props.school);
-	// 	if (props.course != course) setCourse(props.course);
-	// 	if (props.fromDate != fromDate) setFromDate(props.fromDate);
-	// 	if (props.toDate != toDate) setToDate(props.toDate);
-	// });
+	useEffect(
+		() => {
+			if (props.degree != degree) setDegree(props.degree);
+			if (props.school != school) setSchool(props.school);
+			if (props.course != course) setCourse(props.course);
+			if (props.fromDate != fromDate) setFromDate(props.fromDate);
+			if (props.toDate != toDate) setToDate(props.toDate);
+		},
+		[saveCard]
+	);
 
 	return (
 		<Context.Consumer>
@@ -76,8 +79,7 @@ export const EducationCard = props => {
 							</div>
 							{editMode ? (
 								<input
-									className="m-1"
-									size="37"
+									className="input-field m-1"
 									type="text"
 									value={degree}
 									onChange={({ target: { value: v } }) => setDegree(v)}
@@ -87,8 +89,7 @@ export const EducationCard = props => {
 							)}
 							{editMode ? (
 								<input
-									className="m-1"
-									size="37"
+									className="input-field m-1"
 									type="text"
 									value={school}
 									onChange={e => setSchool(e.target.value)}
@@ -98,8 +99,7 @@ export const EducationCard = props => {
 							)}
 							{editMode ? (
 								<input
-									className="m-1"
-									size="37"
+									className="input-field m-1"
 									type="text"
 									value={course}
 									onChange={e => setCourse(e.target.value)}
@@ -122,7 +122,9 @@ export const EducationCard = props => {
 							{editMode ? (
 								<button
 									className="btn btn-info float-right"
-									onClick={() =>
+									onClick={() => {
+										setEditMode(!editMode);
+										setSaveCard(!saveCard);
 										actions.editEducation(
 											props.id,
 											school,
@@ -131,8 +133,8 @@ export const EducationCard = props => {
 											fromDate,
 											toDate,
 											props.resume
-										)
-									}>
+										);
+									}}>
 									Save
 								</button>
 							) : (

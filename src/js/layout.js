@@ -30,7 +30,7 @@ export class Layout extends React.Component {
 	state = {
 		userLoggedIn: false,
 		left: "education",
-		right: "resume"
+		right: "page"
 	};
 
 	rowStyle = {
@@ -63,7 +63,13 @@ export class Layout extends React.Component {
 							<div className="top-panel col-12 border-bottom text-center">top panel</div>
 						</div>
 						<div className="body row">
-							<div className="left-panel col-4 border-right text-center" style={this.rowStyle}>
+							<div
+								className={
+									this.state.right === "page"
+										? "left-panel col-3 border-right text-center"
+										: "left-panel col-4 border-right text-center"
+								}
+								style={this.rowStyle}>
 								<div className="text-left">
 									<div
 										className="route border-bottom border-left p-1 text-light d-inline-block"

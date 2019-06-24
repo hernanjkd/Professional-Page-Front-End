@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import "../../styles/index.scss";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
 export const SkillCard = props => {
+	const [saveCard, setSaveCard] = useState(false);
 	const [editMode, setEditMode] = useState(false);
 	const [skill, setSkill] = useState(props.skill);
-	// if (props.skill != skill) setSkill(props.skill);
+
+	useEffect(
+		() => {
+			if (props.skill != skill) setSkill(props.skill);
+		},
+		[saveCard]
+	);
 
 	return (
 		<div className="card mt-2 bg-light">
@@ -21,8 +27,7 @@ export const SkillCard = props => {
 				</div>
 				{editMode ? (
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						value={skill}
 						onChange={({ target: { value: v } }) => setSkill(v)}
@@ -59,7 +64,11 @@ export const SkillCard = props => {
 							{editMode ? (
 								<button
 									className="btn btn-info float-right"
-									onClick={() => actions.editSkill(props.id, skill, props.resume, props.page)}>
+									onClick={() => {
+										setEditMode(!editMode);
+										setSaveCard(!saveCard);
+										actions.editSkill(props.id, skill, props.resume, props.page);
+									}}>
 									Save
 								</button>
 							) : (

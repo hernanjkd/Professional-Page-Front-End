@@ -53,24 +53,22 @@ export const Education = () => {
 						/>
 					</div>
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						placeholder="Degree"
 						value={degree}
 						onChange={({ target: { value: v } }) => setDegree(v)}
 					/>
 					<input
-						className="m-1"
-						size="37"
+						className="input-field m-1"
 						type="text"
 						placeholder="School"
 						value={school}
 						onChange={({ target: { value } }) => setSchool(value)}
 					/>
 					<textarea
+						className="input-field m-1"
 						rows="3"
-						cols="36"
 						placeholder="Courses"
 						defaultValue={course}
 						onChange={e => setCourse(e.target.value)}
