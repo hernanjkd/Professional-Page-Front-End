@@ -18,9 +18,10 @@ export class Page extends React.Component {
 
 	componentDidMount() {
 		window.scrollTo(0, 0);
-		const c = this.contentImg.current.style;
-		c.height = "300px";
-		c.marginTop = "40px";
+		const cd = this.contentDiv.current.clientHeight;
+		const ci = this.contentImg.current.style;
+		ci.height = cd - 50 + "px";
+		ci.marginTop = "40px";
 	}
 
 	render() {
