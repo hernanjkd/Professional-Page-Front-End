@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Form";
 
 export class Login extends React.Component {
 	loginStyle = {
-		height: window.innerHeight - 200
+		height: window.innerHeight - 400
 	};
 
 	render() {
@@ -63,96 +63,66 @@ export class Login extends React.Component {
 						<div className="col-2" />
 					</div>
 				</div>
-				<div className="bg-dark">
-					<div className="form-row">
-						<div className="form-group col-md-1">
-							<div className="container mt-3">
-								<div className="first media mt-3">
-									<img
-										src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201802/portfolio.jpeg?FiDuEq_3VnAh8wxpLykw3aWI.eIslcbH"
-										className="align-self-center mr-3"
-									/>
-									<div className="media-body">
-										<h4>Create your portfolio in a few clicks!!!</h4>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua.
-										</p>
-									</div>
-								</div>
+				<div className="form-row" />
+				<div className="jumbotron jumbotron-fluid p-5">
+					<div className="container">
+						<div className="row">
+							<div className="col">
+								<img
+									src="https://static1.squarespace.com/static/5604ac69e4b02c0c1c454aed/t/582f3ed0be65940ae0404f70/1479491298313/shutterstock_132019721.jpg?format=1500w"
+									className="img-thumbnail"
+									alt="Responsive image"
+								/>
+							</div>
+							<div className="col">
+								<center>
+									<h2>Fluid jumbotron</h2>
+								</center>
+								<p> </p>
+								<p className="lead">
+									This is a modified jumbotron that occupies the entire horizontal space of its
+									parent.
+								</p>
 							</div>
 						</div>
 					</div>
-
-					<div className="form-row">
-						<div className="form-group col-md-1">
-							<div className="second media mt-3">
+				</div>
+				<div className="jumbotron jumbotron-fluid p-5">
+					<div className="container">
+						<div className="row">
+							<div className="col">
+								<h1 className="display-4">Fluid jumbotron</h1>
+								<p className="lead">
+									This is a modified jumbotron that occupies the entire horizontal space of its
+									parent.
+								</p>
+							</div>
+							<div className="col">
 								<img
-									src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201802/portfolio.jpeg?FiDuEq_3VnAh8wxpLykw3aWI.eIslcbH"
-									className="align-self-center mr-3 width"
+									src="https://static1.squarespace.com/static/5bc8fc367046807597d3d63d/t/5c1848204d7a9c986e1e75e2/1545095228073/?format=1500w"
+									className="img-thumbnail"
+									alt="Responsive image"
 								/>
-								<div className="container mt-3">
-									<div className="media-body">
-										<h4>Quick Resume Setup</h4>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua.
-										</p>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
-					<div className="form-row">
-						<div className="form-group col-md-1">
-							<div className="third media mt-3">
+				</div>
+				<div className="jumbotron jumbotron-fluid p-5 mb-0">
+					<div className="container">
+						<div className="row">
+							<div className="col">
 								<img
-									src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201802/portfolio.jpeg?FiDuEq_3VnAh8wxpLykw3aWI.eIslcbH"
-									className="align-self-start mr-3"
+									src="http://static1.squarespace.com/static/5755a35501dbae3c6d1ba03e/575f377b859fd09b4e47e86f/57d30447be65947fb326a32b/1475862663796/building_personal_website.jpg?format=1500w"
+									className="img-thumbnail"
+									alt="Responsive image"
 								/>
-								<div className="media-body">
-									<h4>Business cards made easy</h4>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua.
-									</p>
-								</div>
 							</div>
-						</div>
-					</div>
-
-					<div className="form-row">
-						<div className="form-group col-md-1">
-							<div className="fourth media mt-3">
-								<img
-									src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201802/portfolio.jpeg?FiDuEq_3VnAh8wxpLykw3aWI.eIslcbH"
-									className="align-self-start mr-3"
-								/>
-								<div className="media-body">
-									<h4>Jobs click and apply!!</h4>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div className="form-row">
-							<div className="form-group col-md-1">
-								<div className="five media mt-3">
-									<img
-										src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201802/portfolio.jpeg?FiDuEq_3VnAh8wxpLykw3aWI.eIslcbH"
-										className="align-self-start mr-3"
-									/>
-									<div className="media-body">
-										<h4>SHOW EMPLOYERS YOUR TALENT</h4>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua.
-										</p>
-									</div>
-								</div>
+							<div className="col">
+								<h1 className="display-4">Fluid jumbotron</h1>
+								<p className="lead">
+									This is a modified jumbotron that occupies the entire horizontal space of its
+									parent.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -162,19 +132,19 @@ export class Login extends React.Component {
 	}
 }
 
-{
-	/*<Navbar className="bg-light justify-content-between">
-				<Form inline>
-					<InputGroup>
-						<InputGroup.Prepend>
-							<InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-						</InputGroup.Prepend>
-						<FormControl placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-					</InputGroup>
-				</Form>
-				<Form inline>
-					<FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-					<Button type="submit">Submit</Button>
-				</Form>
-			</Navbar>*/
-}
+// {
+// 	/*<Navbar className="bg-light justify-content-between">
+// 				<Form inline>
+// 					<InputGroup>
+// 						<InputGroup.Prepend>
+// 							<InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+// 						</InputGroup.Prepend>
+// 						<FormControl placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+// 					</InputGroup>
+// 				</Form>
+// 				<Form inline>
+// 					<FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+// 					<Button type="submit">Submit</Button>
+// 				</Form>
+// 			</Navbar>*/
+// }
