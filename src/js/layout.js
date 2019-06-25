@@ -28,7 +28,7 @@ const views = {
 
 export class Layout extends React.Component {
 	state = {
-		userLoggedIn: false,
+		userLoggedIn: true,
 		left: "education",
 		right: "page"
 	};
@@ -38,7 +38,7 @@ export class Layout extends React.Component {
 	};
 
 	render() {
-		if (this.state.userLoggedIn) {
+		if (!this.state.userLoggedIn) {
 			return (
 				<BrowserRouter>
 					<ScrollToTop>

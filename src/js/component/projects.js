@@ -1,44 +1,47 @@
 import React from "react";
+import Battleship from "../../img/battleship.png";
+import ContactList from "../../img/contact-list.jpg";
+import TicTacToe from "../../img/tictactoe.jpg";
+import IG from "../../img/ig.png";
+import MusicPlayer from "../../img/music-player.png";
+import TrafficLight from "../../img/traffic-light.jpeg";
 
 const projectDescription = [
 	{
 		name: "Tic-Tac-Toe",
 		Tools: "React · ECMASCRIPT · HTML · CSS",
-		imgUrl:
-			"https://www.athome.com/dw/image/v2/AAYZ_PRD/on/demandware.static/-/Sites-AtHome/default/dw8ddc6364/images/124217187.jpg?sw=1268&sh=1992&sm=fit",
+		imgUrl: TicTacToe,
 		Code: "https://github.com/jhcxavier/Tic-Tac-Toe/blob/master/src/js/App.js"
 	},
 
 	{
 		name: "Traffic Light",
 		Tools: "React · CSS · HTML · ECMASCRIPT",
-		imgUrl:
-			"https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2015/08/o-TRAFFIC-LIGHT-facebook-1024x512.jpg-.jpg",
+		imgUrl: TrafficLight,
 		Code: "https://github.com/jhcxavier/Traffic-Light-React-/blob/master/src/js/component/TrafficLight.js"
 	},
 	{
 		name: "Battleship",
 		Tools: "JavaScript · React · HTML · CSS",
-		imgUrl:
-			"https://www.gamersdecide.com/sites/default/files/authors/u147237/world-of-warships-battleship-bellerophon.jpg",
+		imgUrl: Battleship,
 		Code: "https://github.com/hernanjkd/Battleship"
 	},
 	{
 		name: "Music Player",
 		Tools: "Bootstrap · JavaScript · API · CSS",
-		imgUrl: "https://images-na.ssl-images-amazon.com/images/I/91e9eqVQhJL.png",
+		imgUrl: MusicPlayer,
 		Code: "https://github.com/hernanjkd/Music-Player"
 	},
 	{
 		name: "Instagram Feed",
 		Tools: "React · CSS · HTML · JS · Bootstrap",
-		imgUrl: "https://10web.io/wp-content/uploads/2017/11/instagram_320-min.png",
+		imgUrl: IG,
 		Code: "https://github.com/VF4code/Instagram-Feed"
 	},
 	{
 		name: "Contact List",
 		Tools: "React · Flask · Python · JS · HTML",
-		imgUrl: "https://www.recovery-android.com/images/android-tips/nexus-contacts-to-display.jpg",
+		imgUrl: ContactList,
 		Code: "https://github.com/jhcxavier/Contact-List-Back-End"
 	}
 ];

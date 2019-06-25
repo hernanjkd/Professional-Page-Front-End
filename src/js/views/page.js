@@ -1,6 +1,7 @@
 import React from "react";
 import { Context } from "../store/appContext";
 import { Projects } from "../component/projects";
+import woodFrame from "../../img/wood-frame.jpeg";
 
 export class Page extends React.Component {
 	constructor(props) {
@@ -24,10 +25,10 @@ export class Page extends React.Component {
 					// Contains the information for the user title, goals and skills
 					const objective = (
 						<div className="col-5 text-left align-self-center">
-							<h1 className="mb-5">{store.user.title}</h1>
+							<h1 className="title-font mb-5">{store.user.title}</h1>
 							<p className="mb-5">{store.user.goal}</p>
 
-							<ul className="d-inline-block mr-5 ml-5">
+							<ul className="d-inline-block mr-5">
 								{skills.slice(0, half).map((item, i) => {
 									return <li key={i}>{item.skill}</li>;
 								})}
@@ -62,7 +63,7 @@ export class Page extends React.Component {
 					}
 
 					return (
-						<div className="page container m-2 p-0 bg-light">
+						<div className="page container-fluid m-2 p-0 bg-light">
 							<nav className="navBar">
 								<a>{name}</a>
 								<a className="nav-link" href="#projects">
@@ -85,12 +86,23 @@ export class Page extends React.Component {
 									<img className="profile-image imgshadow" src={store.user.imageURL} alt={name} />
 								</div>
 								<div className="col-2" />
-
-								{this.state.content}
+								<div className="col-5 align-self-center objective-div">{this.state.content}</div>
+								<img className="objective-background-img" src={woodFrame} />
 
 								<div className="col-1" />
 							</div>
-							<div className="projectsRow row d-flex justify-content-around">
+							<div className="row">
+								<div className="col text-left">
+									<h1 id="projects" className="projectsRow title-font pl-3">
+										Projects
+									</h1>
+								</div>
+							</div>
+							<div className="project-div row d-flex justify-content-around">
+								<img
+									className="project-background-img"
+									src="https://img.freepik.com/free-photo/old-wooden-texture-background-vintage_55716-1138.jpg?size=626&ext=jpg"
+								/>
 								<Projects />
 							</div>
 							<footer className="mt-auto py-5 text-center">

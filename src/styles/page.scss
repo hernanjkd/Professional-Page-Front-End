@@ -1,5 +1,44 @@
 .page {
     box-shadow: 3px 5px 10px 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.title-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+}
+
+.nav-background-img {
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+}
+
+.project-background-img {
+    position: absolute;
+    width: 97%;
+    height: 115%;
+    z-index: 2;
+}
+
+.objective-div {
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    z-index: 3;
+}
+.col-5 {
+    max-width: 100%!important;
+}
+
+.objective-background-img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 12.5em;
+    right: 2em;
+    z-index: 1;
 }
 
 .profile-image {
@@ -15,6 +54,8 @@
     padding-left: 35px;
     padding-top: 15px;
     text-align: left;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
 }
 .navBar a {
     display: inline;
@@ -27,12 +68,16 @@
 }
 
 .projectsRow {
-    padding-top: 130px;
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 11em;
+    border-bottom: 1px solid black;
 }
 
 .projects {
     width: 15rem;
     background-color: rgb(214, 214, 214);
+    z-index: 2;
 }
 .projects img{
     height: 145px;

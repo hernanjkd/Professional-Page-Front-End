@@ -19,13 +19,13 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			fetch("https://3000-b7a14a66-7552-47d8-a842-617740f3b9d5.ws-us0.gitpod.io/education")
-				.then(response => response.json())
-				.then(data => {
-					let { store } = this.state;
-					store.education = data;
-					this.setState({ store });
-				});
+			// fetch(process.env.HOST + "/education")
+			// 	.then(response => response.json())
+			// 	.then(data => {
+			// 		let { store } = this.state;
+			// 		store.education = data;
+			// 		this.setState({ store });
+			// 	});
 		}
 
 		render() {
