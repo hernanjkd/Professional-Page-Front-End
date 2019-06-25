@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Form";
+import { Jumbotron } from "../component/Jumbotron";
 
 export class Login extends React.Component {
 	loginStyle = {
@@ -64,6 +65,7 @@ export class Login extends React.Component {
 					</div>
 				</div>
 				<div className="form-row" />
+				<Jumbotron />
 				<div className="jumbotron jumbotron-fluid p-5 bg-dark text-light">
 					<div className="container">
 						<div className="row">
