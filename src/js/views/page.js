@@ -11,12 +11,26 @@ export class Page extends React.Component {
 			content: null,
 			display: "objective"
 		};
+
+		this.contentDiv = React.createRef();
+		this.contentImg = React.createRef();
+	}
+
+	componentDidMount() {
+		window.scrollTo(0, 0);
+		const c = this.contentImg.current.style;
+		c.height = "300px";
+		c.marginTop = "40px";
 	}
 
 	render() {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
+					const pageToScreenWidthRatio = 741 / 1280;
+					const screenWidth = window.innerWidth;
+					const pageWidth = Math.floor(screenWidth * pageToScreenWidthRatio);
+
 					const name = store.user.firstName + " " + store.user.lastName;
 
 					const skills = store.skills;
@@ -24,8 +38,8 @@ export class Page extends React.Component {
 
 					// Contains the information for the user title, goals and skills
 					const objective = (
-						<div className="col-5 text-left align-self-center">
-							<h1 className="title-font mb-5">{store.user.title}</h1>
+						<div className="col-5 text-left align-self-center text-shadow">
+							<h1 className="title-font mt-5">{store.user.title}</h1>
 							<p className="mb-5">{store.user.goal}</p>
 
 							<ul className="d-inline-block mr-5">
@@ -45,8 +59,8 @@ export class Page extends React.Component {
 					let [aboutArr] = store.about.filter(item => item.page === "true");
 					aboutArr = aboutArr.description.split("<br>");
 					const about = (
-						<div className="col-5 text-left">
-							<h2 className="mt-5">About Me</h2>
+						<div className="col-5 text-left text-shadow">
+							<h2 className="title-font mt-5">About Me</h2>
 							{aboutArr.map((item, index) => {
 								return <p key={index}>{item}</p>;
 							})}
@@ -86,9 +100,10 @@ export class Page extends React.Component {
 									<img className="profile-image imgshadow" src={store.user.imageURL} alt={name} />
 								</div>
 								<div className="col-2" />
-								<div className="col-5 align-self-center objective-div">{this.state.content}</div>
-								<img className="objective-background-img" src={woodFrame} />
-
+								<div className="col-5 objective-div" ref={this.contentDiv}>
+									<img className="card-img-top imgshadow" ref={this.contentImg} src={woodFrame} />
+									<div className="card-img-overlay">{this.state.content}</div>
+								</div>
 								<div className="col-1" />
 							</div>
 							<div className="row">
