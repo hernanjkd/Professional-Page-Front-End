@@ -10,8 +10,8 @@ export class Login extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div className="container-fluid bg-white" style={this.loginStyle}>
+			<div className="bg-dark">
+				<div className="container-fluid bg-light" style={this.loginStyle}>
 					<div className="row imageStyle pt-5">
 						<div className="col-1" />
 						<div className="col-4">
@@ -64,7 +64,7 @@ export class Login extends React.Component {
 					</div>
 				</div>
 				<div className="form-row" />
-				<div className="jumbotron jumbotron-fluid p-5">
+				<div className="jumbotron jumbotron-fluid p-5 bg-dark text-light">
 					<div className="container">
 						<div className="row">
 							<div className="col">
@@ -107,7 +107,7 @@ export class Login extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron jumbotron-fluid p-5 mb-0">
+				<div className="jumbotron jumbotron-fluid p-5 bg-dark text-light mb-0">
 					<div className="container">
 						<div className="row">
 							<div className="col">
