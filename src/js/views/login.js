@@ -41,14 +41,6 @@ export class Login extends React.Component {
 							<Button className="p-1 pr-4 pl-4 d-flex justify-content-center" type="submit">
 								Login
 							</Button>
-
-							<Form.Group controlId="formBasicChecbox">
-								<Form.Check
-									type="checkbox"
-									className="pt-3"
-									label="Agreed with the Terms and Conditions"
-								/>
-							</Form.Group>
 							<div className="float-right">
 								<Link to={"/registration"}>
 									<Button className="p-1 pr-4 pl-4 secondary" type="submit">
@@ -61,7 +53,6 @@ export class Login extends React.Component {
 					</div>
 				</div>
 				<div className="form-row" />
-				<Jumbotron />
 				<div className="jumbotron jumbotron-fluid p-5 bg-dark text-light">
 					<div className="container">
 						<div className="row">
