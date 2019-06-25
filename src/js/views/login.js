@@ -11,7 +11,7 @@ export class Login extends React.Component {
 	render() {
 		return (
 			<div className="bg-dark">
-				<div className="container-fluid bg-light" style={this.loginStyle}>
+				<div className="container-fluid bg-white" style={this.loginStyle}>
 					<div className="row imageStyle pt-5">
 						<div className="col-1" />
 						<div className="col-4">
@@ -87,7 +87,7 @@ export class Login extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron jumbotron-fluid p-5">
+				<div className="jumbotron jumbotron-fluid p-5 bg-white">
 					<div className="container">
 						<div className="row">
 							<div className="col">
@@ -99,7 +99,7 @@ export class Login extends React.Component {
 							</div>
 							<div className="col">
 								<img
-									src="https://static1.squarespace.com/static/5bc8fc367046807597d3d63d/t/5c1848204d7a9c986e1e75e2/1545095228073/?format=1500w"
+									src="http://static1.squarespace.com/static/5755a35501dbae3c6d1ba03e/575f377b859fd09b4e47e86f/57d30447be65947fb326a32b/1475862663796/building_personal_website.jpg?format=1500w"
 									className="img-thumbnail"
 									alt="Responsive image"
 								/>
@@ -112,7 +112,7 @@ export class Login extends React.Component {
 						<div className="row">
 							<div className="col">
 								<img
-									src="http://static1.squarespace.com/static/5755a35501dbae3c6d1ba03e/575f377b859fd09b4e47e86f/57d30447be65947fb326a32b/1475862663796/building_personal_website.jpg?format=1500w"
+									src="https://static1.squarespace.com/static/5bc8fc367046807597d3d63d/t/5c1848204d7a9c986e1e75e2/1545095228073/?format=1500w"
 									className="img-thumbnail"
 									alt="Responsive image"
 								/>
