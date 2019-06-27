@@ -11,7 +11,7 @@ export const Registration = () => {
 					<div className="col" />
 					<div className="col-6 col-offset-3">
 						<div className="panel panel-primary">
-							<div className="panel-heading pb-3">Thank you for Signing Up!</div>
+							<div className="panel-heading pb-3" />
 							<div className="panel-body">
 								<div className="form-group">
 									<label htmlFor="fname">First Name</label>
