@@ -17,11 +17,11 @@ export class Page extends React.Component {
 	}
 
 	componentDidMount() {
-		window.scrollTo(0, 0);
-		const cd = this.contentDiv.current.clientHeight;
-		const ci = this.contentImg.current.style;
-		ci.height = cd - 50 + "px";
-		ci.marginTop = "40px";
+		// window.scrollTo(0, 0);
+		// const cd = this.contentDiv.current.clientHeight;
+		// const ci = this.contentImg.current.style;
+		// ci.height = cd - 50 + "px";
+		// ci.marginTop = "40px";
 	}
 
 	render() {
@@ -60,8 +60,8 @@ export class Page extends React.Component {
 					let [aboutArr] = store.about.filter(item => item.page === "true");
 					aboutArr = aboutArr.description.split("<br>");
 					const about = (
-						<div className="col-5 text-left text-shadow">
-							<h2 className="title-font mt-5">About Me</h2>
+						<div className="col-5 text-left text-shadow align-self-top">
+							<h2 className="title-font">About Me</h2>
 							{aboutArr.map((item, index) => {
 								return <p key={index}>{item}</p>;
 							})}
@@ -102,8 +102,8 @@ export class Page extends React.Component {
 								</div>
 								<div className="col-2" />
 								<div className="col-5 objective-div" ref={this.contentDiv}>
-									<img className="card-img-top imgshadow" ref={this.contentImg} src={woodFrame} />
-									<div className="card-img-overlay">{this.state.content}</div>
+									{/* <img className="card-img-top imgshadow" ref={this.contentImg} src={woodFrame} /> */}
+									<div className="">{this.state.content}</div>
 								</div>
 								<div className="col-1" />
 							</div>

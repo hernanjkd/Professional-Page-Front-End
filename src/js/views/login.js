@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Form";
 import { Jumbotron } from "../component/Jumbotron";
+import { Context } from "../store/appContext";
 
 export class Login extends React.Component {
 	render() {
@@ -38,9 +39,18 @@ export class Login extends React.Component {
 								<Form.Control type="password" placeholder="Password" />
 							</Form.Group>
 
-							<Button className="p-1 pr-4 pl-4 d-flex justify-content-center" type="submit">
-								Login
-							</Button>
+							<Context.Consumer>
+								{({ actions }) => {
+									return (
+										<Button
+											className="p-1 pr-4 pl-4 d-flex justify-content-center"
+											type="submit"
+											onClick={() => actions.loginUser()}>
+											Login
+										</Button>
+									);
+								}}
+							</Context.Consumer>
 
 							<Form.Group controlId="formBasicChecbox">
 								<Form.Check
@@ -61,7 +71,6 @@ export class Login extends React.Component {
 					</div>
 				</div>
 				<div className="form-row" />
-				<Jumbotron />
 				<div className="jumbotron jumbotron-fluid p-5 bg-dark text-light">
 					<div className="container">
 						<div className="row">
