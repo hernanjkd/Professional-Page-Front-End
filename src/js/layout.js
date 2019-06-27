@@ -29,7 +29,7 @@ const views = {
 export class Layout extends React.Component {
 	state = {
 		left: "education",
-		right: "page"
+		right: "resume"
 	};
 
 	rowStyle = {

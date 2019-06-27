@@ -108,16 +108,16 @@ export const ExperienceCard = props => {
 								checked={props.resume === "true" ? "checked" : ""}
 								onChange={() => {
 									let resume = props.resume === "true" ? "false" : "true";
-									actions.editExperience(
-										props.id,
-										title,
-										company,
-										description,
-										fromDate,
-										toDate,
-										resume,
-										props.page
-									);
+									const obj = {
+										id: props.id,
+										title: title,
+										company: company,
+										description: description,
+										fromDate: fromDate,
+										toDate: toDate,
+										resume: resume,
+										page: props.page
+									};
 								}}
 							/>
 							Resume
@@ -127,16 +127,17 @@ export const ExperienceCard = props => {
 								checked={props.page === "true" ? "checked" : ""}
 								onChange={() => {
 									let page = props.page === "true" ? "false" : "true";
-									actions.editExperience(
-										props.id,
-										title,
-										company,
-										description,
-										fromDate,
-										toDate,
-										props.resume,
-										page
-									);
+									const obj = {
+										id: props.id,
+										title: title,
+										company: company,
+										description: description,
+										fromDate: fromDate,
+										toDate: toDate,
+										resume: props.resume,
+										page: page
+									};
+									actions.editItem("experience", props.index, obj);
 								}}
 							/>
 							Page
@@ -146,16 +147,17 @@ export const ExperienceCard = props => {
 									onClick={() => {
 										setEditMode(!editMode);
 										setSaveCard(!saveCard);
-										actions.editExperience(
-											props.id,
-											title,
-											company,
-											description,
-											fromDate,
-											toDate,
-											props.resume,
-											props.page
-										);
+										const obj = {
+											id: props.id,
+											title: title,
+											company: company,
+											description: description,
+											fromDate: fromDate,
+											toDate: toDate,
+											resume: props.resume,
+											page: props.page
+										};
+										actions.editItem("experience", props.index, obj);
 									}}>
 									Save
 								</button>
@@ -178,5 +180,6 @@ ExperienceCard.propTypes = {
 	toDate: PropTypes.string,
 	resume: PropTypes.string,
 	page: PropTypes.string,
-	id: PropTypes.number
+	id: PropTypes.number,
+	index: PropTypes.number
 };

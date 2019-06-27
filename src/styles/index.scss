@@ -17,8 +17,12 @@ body {
     width: 100px;
 }
 
-.fa-pencil-alt, .fa-trash-alt, .fa-times, .route {
+.fa-pencil-alt, .fa-trash-alt, .fa-times, .route, .editItem {
     cursor: pointer;
+}
+
+.editItem {
+    font-size: 2em;
 }
 
 .route {
@@ -35,5 +39,5 @@ body {
 }
 
 .react-datepicker-popper[data-placement^="bottom-start"]{
-    left:-30px!important;
+    left:-70px!important;
 }
