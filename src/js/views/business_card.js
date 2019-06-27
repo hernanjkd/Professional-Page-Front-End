@@ -13,7 +13,6 @@ export class BusinessCard extends React.Component {
 		return (
 			//    b_cards[store.cardStyle]
 			<div className="container mt-2 p-4 bg-light">
-				<div className="border-fix">
 					<Context.Consumer>
 						{({ store }) => {
 							let row = [];
@@ -27,7 +26,6 @@ export class BusinessCard extends React.Component {
 							return <div>{row}</div>;
 						}}
 					</Context.Consumer>
-				</div>
 			</div>
 		);
 	}

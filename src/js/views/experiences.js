@@ -82,7 +82,7 @@ export const Experiences = () => {
 							rows="3"
 							name="description"
 							placeholder="Description"
-							defaultValue={description}
+							value={description}
 							onChange={e => setDescription(e.target.value)}
 						/>
 					</div>

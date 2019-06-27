@@ -79,7 +79,7 @@ export const Education = () => {
 							className="input-field m-1"
 							rows="3"
 							placeholder="Courses"
-							defaultValue={course}
+							value={course}
 							onChange={e => setCourse(e.target.value)}
 						/>
 					</div>

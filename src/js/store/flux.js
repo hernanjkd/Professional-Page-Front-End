@@ -26,6 +26,11 @@ const getState = ({ getStore, setStore, getActions }) => {
 				const store = getStore();
 				store[category][index] = item;
 				setStore({ store });
+			},
+			deleteItem: (category, index) => {
+				const store = getStore();
+				store[category] = store[category].filter((item, i) => i != index);
+				setStore({ store });
 			}
 		},
 		store: {
