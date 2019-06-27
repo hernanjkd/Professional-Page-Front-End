@@ -115,7 +115,16 @@ export const EducationCard = props => {
 								checked={props.resume === "true" ? "checked" : ""}
 								onChange={() => {
 									let resume = props.resume === "true" ? "false" : "true";
-									actions.editEducation(props.id, school, degree, course, fromDate, toDate, resume);
+									const obj = {
+										id: props.id,
+										school: school,
+										degree: degree,
+										course: course,
+										fromDate: fromDate,
+										toDate: toDate,
+										resume: resume
+									};
+									actions.editItem("education", props.index, obj);
 								}}
 							/>
 							Resume
@@ -125,15 +134,16 @@ export const EducationCard = props => {
 									onClick={() => {
 										setEditMode(!editMode);
 										setSaveCard(!saveCard);
-										actions.editEducation(
-											props.id,
-											school,
-											degree,
-											course,
-											fromDate,
-											toDate,
-											props.resume
-										);
+										const obj = {
+											id: props.id,
+											school: school,
+											degree: degree,
+											course: course,
+											fromDate: fromDate,
+											toDate: toDate,
+											resume: props.resume
+										};
+										actions.editItem("education", props.index, obj);
 									}}>
 									Save
 								</button>
@@ -150,6 +160,7 @@ export const EducationCard = props => {
 
 EducationCard.propTypes = {
 	id: PropTypes.number,
+	index: PropTypes.number,
 	degree: PropTypes.string,
 	school: PropTypes.string,
 	course: PropTypes.string,

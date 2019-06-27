@@ -13,6 +13,16 @@ const getState = ({ getStore, setStore, getActions }) => {
 			},
 			loginUser: () => {
 				setStore({ userLoggedIn: true });
+			},
+			addItem: (category, item) => {
+				const store = getStore();
+				store[category] = store[category].concat(item);
+				setStore({ store });
+			},
+			editItem: (category, index, item) => {
+				const store = getStore();
+				store[category][index] = item;
+				setStore({ store });
 			}
 		},
 		store: {
@@ -117,28 +127,28 @@ const getState = ({ getStore, setStore, getActions }) => {
 					page: "false"
 				},
 				{
-					id: 6,
+					id: 7,
 					skill: "Git",
 					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
-					id: 6,
+					id: 8,
 					skill: "HTML",
 					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
-					id: 6,
+					id: 9,
 					skill: "Bootstrap",
 					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
-					id: 6,
+					id: 10,
 					skill: "CSS",
 					level: 3,
 					resume: "true",
@@ -157,7 +167,52 @@ const getState = ({ getStore, setStore, getActions }) => {
 				},
 				{
 					id: 2,
-					school: "4 Geeks Academy",
+					school: "University of Miami",
+					degree: "Agriculture",
+					course: "Urban Gardening",
+					fromDate: "05/01/2019",
+					toDate: "09/01/2019",
+					resume: "true"
+				},
+				{
+					id: 3,
+					school: "FSU",
+					degree: "Psychology",
+					course: "",
+					fromDate: "05/01/2019",
+					toDate: "09/01/2019",
+					resume: "false"
+				},
+				{
+					id: 4,
+					school: "University of Maine",
+					degree: "Mathematics",
+					course: "Calculus, Trigonometry, Algebra",
+					fromDate: "05/01/2019",
+					toDate: "09/01/2019",
+					resume: "true"
+				},
+				{
+					id: 5,
+					school: "4Geeks Academy",
+					degree: "Data Analytics",
+					course: "Panda, Python, Data Analysis",
+					fromDate: "05/01/2019",
+					toDate: "09/01/2019",
+					resume: "false"
+				},
+				{
+					id: 6,
+					school: "FIU",
+					degree: "Physics",
+					course: "E = mc squared",
+					fromDate: "05/01/2019",
+					toDate: "09/01/2019",
+					resume: "false"
+				},
+				{
+					id: 7,
+					school: "4Geeks Academy",
 					degree: "Full Stack Developer",
 					course: "React, Flask",
 					fromDate: "05/01/2019",
