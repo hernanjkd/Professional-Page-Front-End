@@ -41,7 +41,7 @@ export class Login extends React.Component {
 							<Button className="p-1 pr-4 pl-4 d-flex justify-content-center" type="submit">
 								Login
 							</Button>
-							<div className="float-right">
+							<div className="float-right pt-3">
 								<Link to={"/registration"}>
 									<Button className="p-1 pr-4 pl-4 secondary" type="submit">
 										Register
