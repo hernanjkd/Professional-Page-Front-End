@@ -3,6 +3,9 @@ const URL = "https://3000-b02fef55-cde8-4c3f-b61d-f1d75cc4c1d5.ws-us0.gitpod.io"
 const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		actions: {
+			cardStyle: i => {
+				setStore({ cardStyle: i });
+			},
 			changeDisplay: () => {
 				const store = getStore();
 				const updatedUser = store.user;
@@ -26,6 +29,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			}
 		},
 		store: {
+			cardStyle: 0,
 			userLoggedIn: true,
 			user: {
 				id: 1,

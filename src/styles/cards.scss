@@ -1,0 +1,20 @@
+.business_card{
+    height: 97px;
+    width: 146px;
+    cursor: pointer;
+}
+
+.dashed{
+    border-style: dashed;
+    border-right: 0;
+    border-bottom: 0;
+    width: 350px;
+    height: 220px;
+}
+
+.border-fix {
+    height: 100%;
+    width: 100%;
+    border-bottom: dashed;
+    border-right: dashed;
+}
