@@ -1,0 +1,140 @@
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" text-rendering="geometricPrecision" width="816" height="1055" viewBox="0 0 816 1055" style="background:#fff;display:block;fill:#343b30;font-size:13.5px;font-family:'Trebuchet MS', sans-serif;margin:0 auto;">
+	<defs>
+		<style>
+      .svg-rect{fill:rgb(26, 64, 154);}
+			.svg-name{font-size:36px;font-weight:700;letter-spacing:.75px;text-transform:uppercase;}
+      .svg-contact-icon{fill:#e5b0ad;font-weight:700;text-anchor:middle;}
+      .svg-heading{font-size:17px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+		</style>
+
+    <clipPath id="clipPathSVG">
+        <path d="M40 40 h 750 v 960 H40 z"></path>
+    </clipPath>
+	</defs>
+
+
+  <rect x="0" y="0" width="300" height="335" opacity=".55" class="svg-rect" />
+  <rect x="300" y="0" width="516" height="335" opacity=".1" class="svg-rect" />
+  <rect x="0" y="335" width="300" height="720" opacity=".2" class="svg-rect" />
+  
+
+  <g clip-path="url(#clipPathSVG)">
+    <g class="svg-name">
+      <text x="40" y="70" textLength="136">Jessica</text>
+      <text x="40" y="105" textLength="120">Claire</text>
+      <line x1="40" x2="82" y1="126" y2="126" stroke-width="2" stroke="#6d6969" />
+    </g>
+
+
+    <g class="svg-contact">
+      <circle cx="50" cy="156" r="10" fill="#fff" />
+      <text x="50" y="161" class="svg-contact-icon">@</text>
+
+      <circle cx="50" cy="189" r="10" fill="#fff" />
+      <text x="50" y="194" class="svg-contact-icon">h</text>
+
+      <circle cx="50" cy="222" r="10" fill="#fff" />
+      <text x="50" y="225" class="svg-contact-icon">c</text>
+
+      <circle cx="50" cy="255" r="10" fill="#fff" />
+      <text x="50" y="259" class="svg-contact-icon">a</text>
+
+      <text>
+        <tspan x="65" y="160">jessica.claire@live.com</tspan>
+        <tspan x="65" y="193">415-278-2542</tspan>
+        <tspan x="65" y="226">415-669-5989</tspan>
+        <tspan x="65" y="259">123 Main Street, San Francisco</tspan>
+        <tspan x="65" y="277">CA 94122</tspan>
+      </text>
+    </g>
+
+
+    <g class="svg-section-summary">
+      <text x="340" y="140" textLength="218" class="svg-heading svg-heading-summary">Professional Summary</text>
+      <text x="340" y="172">Accomplished Operations executive with a successful track record</text>
+      <text x="340" y="189">overseeing regional Marketing, IT, HR/training and property in company</text>
+      <text x="340" y="206">and franchise operations for a large chain of restaurants.</text>
+    </g>
+
+
+    <g class="svg-section-skills">
+      <text x="40" y="390" textLength="57" class="svg-heading svg-heading-skills">Skills</text>
+
+      <text x="40" y="421">&#8226; &#160; Executive team leadership</text>
+
+      <text x="40" y="439">&#8226; &#160; Multi-million pound P&amp;L </text>
+      <text x="60" y="456">management expertise for South</text>
+      <text x="60" y="473">East region</text>
+      
+      <text x="40" y="490">&#8226; &#160; Client/Vendor relations</text>
+      
+      <text x="40" y="508">&#8226; &#160; Marketing/Product line</text>
+      <text x="60" y="525">development</text>
+
+      <text x="40" y="542">&#8226; &#160; Staff/training policy</text>
+      <text x="60" y="559">development</text>
+      
+      <text x="40" y="577">&#8226; &#160; Process improvement</text>
+    </g>
+
+
+    <g class="svg-section-education">
+      <text x="40" y="630" textLength="98" class="svg-heading svg-heading-education">Education</text>
+
+      <text x="40" y="662" style="font-weight:bold;">San Francisco University</text>
+      <text x="40" y="677">San Francisco, CA &#8226; 2009</text>
+
+      <text x="40" y="702" style="font-weight:bold;font-style:italic;">Master of Business Administration:</text>
+      <text x="40" y="720">Operations Management Speech and</text>
+      <text x="40" y="737">Communication, Sociology and </text>
+      <text x="40" y="754">Psychology</text>
+
+      <text x="40" y="771">Operations Management Speech and</text>
+      <text x="40" y="788">Communication, Sociology and</text>
+      <text x="40" y="805">Psychology</text>
+      
+      <text x="40" y="836">2006</text>
+      <text x="40" y="860" style="font-weight:bold;font-style:italic;">Certified Retail District Manager,</text>
+      <text x="40" y="878" style="font-weight:bold;font-style:italic;">Verizon Inc.:</text>
+    </g>
+
+
+    <g class="svg-section-certifications">
+      <text x="40" y="930" textLength="140" class="svg-heading svg-heading-certifications">Certifications</text>
+
+      <text x="40" y="962">Certified Retail District Manager,</text>
+      <text x="40" y="979">Verizon Inc., July 2009</text>
+    </g>
+
+
+    <g class="svg-section-experience">
+      <text x="340" y="390" textLength="132" class="svg-heading svg-heading-experience">Work History</text>
+
+      <text x="340" y="420" style="font-weight:700;">Verizon Wireless - District Manager</text>
+      <text x="340" y="438" style="font-style:italic;">San Francisco, CA &#8226; 09/2009 - Current</text>
+      <text x="340" y="463">&#8226; &#160; Directed recruitment/training/staff development initiatives to</text>
+      <text x="360" y="480">maximize productivity and revenue potential through development</text>
+      <text x="360" y="497">of a sales team.</text>
+      <text x="340" y="515">&#8226; &#160; Successfully increased employee retention by created a positive</text>
+      <text x="360" y="532">work environment in 18 stores.</text>
+      <text x="340" y="550">&#8226; &#160; Administered daily operations to ensure policies were adhered to</text>
+      <text x="360" y="567">and understood by sales staff.</text>
+      <text x="340" y="585">&#8226; &#160; Cultivated strong business relationships with customers to drive</text>
+      <text x="360" y="602">business developments.</text>
+      <text x="340" y="620">&#8226; &#160; Planned and executed floor merchandising initiatives in</text>
+      <text x="360" y="637">collaboration with merchandise management.</text>
+      <text x="340" y="655">&#8226; &#160; Ensure store is prepared for internal audits through</text>
+      <text x="360" y="672">analysis/preparation of quality assurance and Inventory statistics.</text>
+
+      <text x="340" y="702" style="font-weight:700;">Walgreens, Inc – Operations manager</text>
+      <text x="340" y="720" style="font-style:italic;">San Francisco, CA &#8226; 08/1997 - 09/2009</text>
+      <text x="340" y="745">&#8226; &#160; Oversaw opening/closing operations for a $4 million annual revenue</text>
+      <text x="360" y="762">store in compliance with current company policies/procedures.</text>
+      <text x="340" y="780">&#8226; &#160; Managed operational costs by spearheading inventory control and</text>
+      <text x="360" y="797">leading shipping department activities as well as setting wage targets.</text>
+      <text x="340" y="815">&#8226; &#160; Administered financial processes including accounts</text>
+      <text x="360" y="832">payable/accounts receivable, managing accounting office and</text>
+      <text x="360" y="849">updating customer service files.</text>
+    </g>
+  </g>
+</svg>
