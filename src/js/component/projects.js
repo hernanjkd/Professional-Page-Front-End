@@ -19,7 +19,8 @@ const projectDescription = [
 		name: "Traffic Light",
 		Tools: "React · CSS · HTML · ECMASCRIPT",
 		imgUrl: TrafficLight,
-		Code: "https://github.com/jhcxavier/Traffic-Light-React-/blob/master/src/js/component/TrafficLight.js"
+		Code: "https://github.com/jhcxavier/Traffic-Light-React-/blob/master/src/js/component/TrafficLight.js",
+		Demo: "https://jhcxavier.github.io/Traffic-Light-React-/"
 	},
 	{
 		name: "Battleship",
