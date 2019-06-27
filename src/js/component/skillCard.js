@@ -17,7 +17,7 @@ export const SkillCard = props => {
 	return (
 		<div className="card mt-2 bg-light">
 			<div className="card-body text-left">
-				<div className="float-right">
+				<div className="float-left">
 					{editMode ? (
 						<i className="fas fa-times fa-lg mr-3" onClick={() => setEditMode(!editMode)} />
 					) : (
@@ -47,7 +47,13 @@ export const SkillCard = props => {
 								checked={props.resume === "true" ? "checked" : ""}
 								onChange={() => {
 									let resume = props.resume === "true" ? "false" : "true";
-									actions.editSkill(props.id, skill, resume, props.page);
+									const obj = {
+										id: props.id,
+										skill: skill,
+										resume: resume,
+										page: props.page
+									};
+									actions.editItem("skills", props.index, obj);
 								}}
 							/>
 							Resume
@@ -57,7 +63,13 @@ export const SkillCard = props => {
 								checked={props.page === "true" ? "checked" : ""}
 								onChange={() => {
 									let page = props.page === "true" ? "false" : "true";
-									actions.editSkill(props.id, skill, props.resume, page);
+									const obj = {
+										id: props.id,
+										skill: skill,
+										resume: props.resume,
+										page: page
+									};
+									actions.editItem("skills", props.index, obj);
 								}}
 							/>
 							Page
@@ -67,7 +79,13 @@ export const SkillCard = props => {
 									onClick={() => {
 										setEditMode(!editMode);
 										setSaveCard(!saveCard);
-										actions.editSkill(props.id, skill, props.resume, props.page);
+										const obj = {
+											id: props.id,
+											skill: skill,
+											resume: props.resume,
+											page: props.page
+										};
+										actions.editItem("skills", props.index, obj);
 									}}>
 									Save
 								</button>
@@ -84,6 +102,7 @@ export const SkillCard = props => {
 
 SkillCard.propTypes = {
 	id: PropTypes.number,
+	index: PropTypes.number,
 	skill: PropTypes.string,
 	resume: PropTypes.string,
 	page: PropTypes.string

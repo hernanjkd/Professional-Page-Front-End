@@ -28,7 +28,16 @@ export const ExperienceCard = props => {
 		<div className="card mt-2 bg-light">
 			<div className={editMode ? "card-body text-center" : "card-body text-left"}>
 				<div className="float-left">
-					<i className="fas fa-trash-alt mr-3" />
+					<Context.Consumer>
+						{({ actions }) => {
+							return (
+								<i
+									className="fas fa-trash-alt mr-3"
+									onClick={() => actions.deleteItem("experience", props.index)}
+								/>
+							);
+						}}
+					</Context.Consumer>
 					{editMode ? (
 						<i className="fas fa-times fa-lg" onClick={() => setEditMode(!editMode)} />
 					) : (
@@ -118,6 +127,7 @@ export const ExperienceCard = props => {
 										resume: resume,
 										page: props.page
 									};
+									actions.editItem("experience", props.index, obj);
 								}}
 							/>
 							Resume
