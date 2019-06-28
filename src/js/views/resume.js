@@ -33,7 +33,7 @@ export const Resume = () => {
 				return (
 					<div className="resume container m-2" style={resumeDimensions}>
 						<div className="row">
-							<div className="left-side col-3 text-left border-right p-1">
+							<div className="left-side col-3 text-left border-right p-1 bg-info">
 								<div className="name text-center border-bottom w-100 p-2 mb-1">{name}</div>
 								<div className="dob">D.O.B. {store.user.dob}</div>
 								<div className="email word-wrap py-1">{store.user.email}</div>

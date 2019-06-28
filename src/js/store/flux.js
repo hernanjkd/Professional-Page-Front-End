@@ -34,7 +34,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 		},
 		store: {
 			cardStyle: 0,
-			userLoggedIn: true,
+			userLoggedIn: false,
 			user: {
 				id: 1,
 				firstName: "Hernan",

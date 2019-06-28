@@ -52,16 +52,9 @@ export class Login extends React.Component {
 								}}
 							</Context.Consumer>
 
-							<Form.Group controlId="formBasicChecbox">
-								<Form.Check
-									type="checkbox"
-									className="pt-3"
-									label="Agreed with the Terms and Conditions"
-								/>
-							</Form.Group>
 							<div className="float-right">
 								<Link to={"/registration"}>
-									<Button className="p-1 pr-4 pl-4 secondary" type="submit">
+									<Button className="p-1 pr-4 pl-4 secondary mt-5" type="submit">
 										Register
 									</Button>
 								</Link>
@@ -83,14 +76,11 @@ export class Login extends React.Component {
 							</div>
 							<div className="col font-weight-light w-350px">
 								<h2 className="font-weight-light">Easily Setup your portfolio page</h2>
-								<h5 className="font-weight-light pagragrafo">
+								<p>{""}</p>
+								<h5 className="font-weight-light text-justify pagragrafo">
 									Once you’ve learned how to display a portoflio, you’ll never be far from a paycheck.
-								</h5>
-								<h5 className="font-weight-light pagragrafo">
-									We’re here to explain the ins and outs of showing your projects,
-								</h5>
-								<h5 className="font-weight-light pagragrafo">
-									so you can spend less time applying to jobs and more time making money.{" "}
+									We’re here to explain the ins and outs of showing your projects, so you can spend
+									less time applying to jobs and more time making money.{" "}
 								</h5>
 								{/* <p className="lead">
 									This is a modified jumbotron that occupies the entire horizontal space of its
@@ -100,11 +90,17 @@ export class Login extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron jumbotron-fluid bg-white">
+				<div className="jumbotron jumbotron-fluid p-5 bg-white">
 					<div className="container">
 						<div className="row">
-							<div className="col align-self-center">
-								<h1 className="display-4">QUICK RESUME SETUP WITH A FEW CLICKS</h1>
+							<div className="col">
+								<h2 className="font-weight-light">How our resume builder helps you land jobs faster</h2>
+								<p> </p>
+								<h5 className="font-weight-light text-justify pagragrafo">
+									No more worries about how to make your resume. We guide you through the process of
+									writing each section, step-by-step, down to the smallest part. Our resume generator
+									does all of the hard work. Remember, your work experiences and education are unique.
+								</h5>
 								{/* <p className="lead">
 									This is a modified jumbotron that occupies the entire horizontal space of its
 									parent.
@@ -113,27 +109,34 @@ export class Login extends React.Component {
 							<div className="col">
 								<img
 									src="https://www.hlb.com.my/content/dam/hlb/my/images/Business/Homepage/business-homepage-connectfirst-tile.jpg"
-									className="img-thumbnail p-0"
+									className="img-thumbnail border-0 p-0"
 									alt="Responsive image"
 								/>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron jumbotron-fluid bg-dark text-light mb-0">
+				<div className="jumbotron jumbotron-fluid bg-dark p-5 text-light mb-0">
 					<div className="container">
 						<div className="row">
 							<div className="col">
 								<img
 									src="https://static1.squarespace.com/static/5bc8fc367046807597d3d63d/t/5c1848204d7a9c986e1e75e2/1545095228073/?format=1500w"
-									className="img-thumbnail"
+									className="img-thumbnail border-0 p-0"
 									alt="Responsive image"
 								/>
 							</div>
-							<div className="col align-self-center">
-								<h1 className="display-4">
-									AUTOMATICALLY CREATED BUSINESS CARDS.. JUST PRINT THEM OUT
-								</h1>
+							<div className="col">
+								<h2 className="font-weight-light">
+									Automatically create business card, just print them out!
+								</h2>
+								<p> </p>
+								<h5 className="font-weight-light text-justify pagragrafo">
+									You can further customize your business cards for specific market segments or
+									locales, and you can add names and job titles for new employees as your business
+									grows.
+								</h5>
+
 								{/* <p className="lead">
 									This is a modified jumbotron that occupies the entire horizontal space of its
 									parent.
@@ -142,11 +145,18 @@ export class Login extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron jumbotron-fluid bg-white">
+				<div className="jumbotron jumbotron-fluid p-5 bg-white">
 					<div className="container">
 						<div className="row">
 							<div className="col align-self-center">
-								<h1 className="display-4">APPLY TO JOBS AND SUBMIT YOUR RESUME WITH A CLICK</h1>
+								<h2 className="font-weight-light">Apply to jobs and sumbit your resume with clicks</h2>
+								<p> </p>
+								<h5 className="font-weight-light text-justify pagragrafo">
+									Beat the competition with a professional CPRW quality resume that can be emailed and
+									downloaded in multiple file types including Microsoft Word and PDF formats. Our
+									professional templates are Applicant Tracking System friendly, meaning you won’t get
+									rejected by picky HR software.
+								</h5>
 								{/* <p className="lead">
 									This is a modified jumbotron that occupies the entire horizontal space of its
 									parent.
@@ -155,7 +165,7 @@ export class Login extends React.Component {
 							<div className="col">
 								<img
 									src="https://cdn.pixabay.com/photo/2018/02/14/10/28/business-3152586__340.jpg"
-									className="img-thumbnail"
+									className="img-thumbnail border-0 p-0"
 									alt="Responsive image"
 								/>
 							</div>
