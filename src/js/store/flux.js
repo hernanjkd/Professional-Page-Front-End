@@ -18,19 +18,18 @@ const getState = ({ getStore, setStore, getActions }) => {
 				setStore({ userLoggedIn: true });
 			},
 			addItem: (category, item) => {
-				const store = getStore();
-				store[category] = store[category].concat(item);
-				setStore({ store });
+				let store = getStore();
+				setStore({ [category]: store[category].concat([item]) });
 			},
 			editItem: (category, index, item) => {
-				const store = getStore();
+				let store = getStore();
 				store[category][index] = item;
-				setStore({ store });
+				setStore({ [category]: store[category] });
 			},
 			deleteItem: (category, id) => {
-				const store = getStore();
+				let store = getStore();
 				store[category] = store[category].filter(item => id != item.id);
-				setStore({ store });
+				setStore({ [category]: store[category] });
 			}
 		},
 		store: {

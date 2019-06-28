@@ -45,6 +45,7 @@ export class Page extends React.Component {
 
 							<ul className="d-inline-block mr-5">
 								{skills.slice(0, half).map((item, i) => {
+									debugger;
 									return <li key={i}>{item.skill}</li>;
 								})}
 							</ul>
