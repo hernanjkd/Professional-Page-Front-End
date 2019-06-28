@@ -38,7 +38,7 @@ const views = {
 export class Layout extends React.Component {
 	state = {
 		left: "education",
-		right: "businessCard"
+		right: "resume"
 	};
 
 	rowStyle = {

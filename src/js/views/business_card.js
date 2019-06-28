@@ -13,19 +13,19 @@ export class BusinessCard extends React.Component {
 		return (
 			//    b_cards[store.cardStyle]
 			<div className="container mt-2 p-4 bg-light">
-					<Context.Consumer>
-						{({ store }) => {
-							let row = [];
+				<Context.Consumer>
+					{({ store }) => {
+						let row = [];
+						for (let i = 0; i < 3; i++) {
+							let col = [];
 							for (let i = 0; i < 3; i++) {
-								let col = [];
-								for (let i = 0; i < 3; i++) {
-									col.push(<img className="col p-0 m-0 dashed" src={b_cards[store.cardStyle]} />);
-								}
-								row.push(<div className="row">{col}</div>);
+								col.push(<img className="col p-0 m-0 dashed" src={b_cards[store.cardStyle]} />);
 							}
-							return <div>{row}</div>;
-						}}
-					</Context.Consumer>
+							row.push(<div className="row">{col}</div>);
+						}
+						return <div>{row}</div>;
+					}}
+				</Context.Consumer>
 			</div>
 		);
 	}

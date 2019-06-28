@@ -18,12 +18,24 @@ export const SkillCard = props => {
 		<div className="card mt-2 bg-light">
 			<div className="card-body text-left">
 				<div className="float-left">
+					<Context.Consumer>
+						{({ actions }) => {
+							return (
+								<i
+									className="fas fa-trash-alt"
+									onClick={() => {
+										setSaveCard(!saveCard);
+										actions.deleteItem("skills", props.id);
+									}}
+								/>
+							);
+						}}
+					</Context.Consumer>
 					{editMode ? (
-						<i className="fas fa-times fa-lg mr-3" onClick={() => setEditMode(!editMode)} />
+						<i className="fas fa-times fa-lg ml-3" onClick={() => setEditMode(!editMode)} />
 					) : (
-						<i className="fas fa-pencil-alt mr-3" onClick={() => setEditMode(!editMode)} />
+						<i className="fas fa-pencil-alt ml-3" onClick={() => setEditMode(!editMode)} />
 					)}
-					<i className="fas fa-trash-alt" />
 				</div>
 				{editMode ? (
 					<input

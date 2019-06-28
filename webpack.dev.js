@@ -5,6 +5,7 @@ const PrettierPlugin = require("prettier-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'cheap-module-source-map',
