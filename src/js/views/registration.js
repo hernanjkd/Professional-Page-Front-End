@@ -71,14 +71,7 @@ export const Registration = () => {
 													className="btn btn-primary btn-lg"
 													id="submitbtn"
 													name="submit"
-													onClick={() => {
-														actions.addUser(
-															"firstname",
-															"lastname",
-															document.querySelector("[name=email]").value,
-															"password"
-														);
-													}}>
+													onClick={() => actions.loginUser()}>
 													Sign up!
 												</button>
 											);
