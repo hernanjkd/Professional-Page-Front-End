@@ -3,6 +3,7 @@
     display: inline-block;
     margin: auto;
     box-shadow: 3px 5px 10px 10px;
+    font-size: 1.2em;
 }
 .resume div {
     padding: 0;
@@ -17,4 +18,8 @@
     font-size: 0.9em;
     color: blue;
     text-decoration: underline;
+}
+
+.purpose {
+    font-size: 0.9em;
 }

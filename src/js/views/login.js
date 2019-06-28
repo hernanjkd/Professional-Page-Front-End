@@ -74,6 +74,7 @@ export class Login extends React.Component {
 									alt="Responsive image"
 								/>
 							</div>
+							<div className="col-1" />
 							<div className="col font-weight-light w-350px">
 								<h2 className="font-weight-light">Easily Setup your portfolio page</h2>
 								<p>{""}</p>
@@ -106,6 +107,7 @@ export class Login extends React.Component {
 									parent.
 								</p> */}
 							</div>
+							<div className="col-1" />
 							<div className="col">
 								<img
 									src="https://www.hlb.com.my/content/dam/hlb/my/images/Business/Homepage/business-homepage-connectfirst-tile.jpg"
@@ -126,6 +128,7 @@ export class Login extends React.Component {
 									alt="Responsive image"
 								/>
 							</div>
+							<div className="col-1" />
 							<div className="col">
 								<h2 className="font-weight-light">
 									Automatically create business card, just print them out!
@@ -148,7 +151,7 @@ export class Login extends React.Component {
 				<div className="jumbotron jumbotron-fluid p-5 bg-white">
 					<div className="container">
 						<div className="row">
-							<div className="col align-self-center">
+							<div className="col">
 								<h2 className="font-weight-light">Apply to jobs and sumbit your resume with clicks</h2>
 								<p> </p>
 								<h5 className="font-weight-light text-justify pagragrafo">
@@ -162,6 +165,7 @@ export class Login extends React.Component {
 									parent.
 								</p> */}
 							</div>
+							<div className="col-1" />
 							<div className="col">
 								<img
 									src="https://cdn.pixabay.com/photo/2018/02/14/10/28/business-3152586__340.jpg"

@@ -33,7 +33,7 @@ export const Resume = () => {
 				return (
 					<div className="resume container m-2" style={resumeDimensions}>
 						<div className="row">
-							<div className="left-side col-3 text-left border-right p-1 bg-info">
+							<div className="left-side col-3 text-left border-right p-1">
 								<div className="name text-center border-bottom w-100 p-2 mb-1">{name}</div>
 								<div className="dob">D.O.B. {store.user.dob}</div>
 								<div className="email word-wrap py-1">{store.user.email}</div>
@@ -46,7 +46,7 @@ export const Resume = () => {
 									);
 								})}
 								<h5 className="mt-3">Related Skills</h5>
-								<ul>
+								<ul className="skills">
 									{skills.map((item, index) => {
 										return <li key={index}>{item.skill}</li>;
 									})}
@@ -55,8 +55,8 @@ export const Resume = () => {
 								<div className="about">{about}</div>
 							</div>
 							<div className="col text-left p-1">
-								<p className="purpose">{purpose}</p>
-								<h4>My Experiences</h4>
+								<p className="purpose font-weight-light pt-2 text-center">{purpose}</p>
+								<h4 className="border-top mt-4 pt-2">My Experiences</h4>
 								{exp.map((item, index) => {
 									return (
 										<div className="mt-3" key={index}>
@@ -70,7 +70,7 @@ export const Resume = () => {
 										</div>
 									);
 								})}
-								<h4>Education</h4>
+								<h4 className="border-top pt-2 mt-2">Education</h4>
 								{edu.map((item, index) => {
 									return (
 										<div className="mt-3" key={index}>

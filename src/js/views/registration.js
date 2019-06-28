@@ -6,7 +6,7 @@ export const Registration = () => {
 	const [email, setEmail] = useState("");
 
 	return (
-		<div className="bg-white">
+		<div className="bg-white registration">
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col" />

@@ -114,7 +114,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					id: 4,
 					skill: "Scheme",
 					resume: "false",
-					page: "false"
+					page: "true"
 				},
 				{
 					id: 5,
@@ -126,31 +126,31 @@ const getState = ({ getStore, setStore, getActions }) => {
 					id: 6,
 					skill: "Python",
 					resume: "true",
-					page: "false"
+					page: "true"
 				},
 				{
 					id: 7,
 					skill: "Git",
 					resume: "true",
-					page: "false"
+					page: "true"
 				},
 				{
 					id: 8,
 					skill: "HTML",
 					resume: "true",
-					page: "false"
+					page: "true"
 				},
 				{
 					id: 9,
 					skill: "Bootstrap",
 					resume: "true",
-					page: "false"
+					page: "true"
 				},
 				{
 					id: 10,
 					skill: "CSS",
 					resume: "true",
-					page: "false"
+					page: "true"
 				}
 			],
 			education: [
@@ -244,7 +244,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			],
 			purpose: [
 				{
-					description: "Helping companies reach their goals by serving them great mate.",
+					description: '"Helping companies reach their goals by serving them great mate."',
 					resume: "true",
 					page: "true"
 				}
