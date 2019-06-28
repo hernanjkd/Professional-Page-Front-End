@@ -21,7 +21,7 @@ export const Registration = () => {
 										id="fname"
 										className="form-control"
 										name="fname"
-										placeholder="Example: John Smith"
+										placeholder=""
 									/>
 								</div>
 
@@ -32,7 +32,7 @@ export const Registration = () => {
 										id="emailaddr"
 										className="form-control"
 										name="email"
-										placeholder="Example: john.doe@gmail.com"
+										placeholder=""
 									/>
 								</div>
 								<div className="form-group">
