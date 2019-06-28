@@ -58,7 +58,7 @@ export const Registration = () => {
 								<Form.Group controlId="formBasicChecbox">
 									<Form.Check
 										type="checkbox"
-										className="pt-3"
+										className="p-3"
 										label="Agreed with the Terms and Conditions"
 									/>
 								</Form.Group>
@@ -68,7 +68,7 @@ export const Registration = () => {
 											return (
 												<button
 													type="submit"
-													className="btn btn-primary btn-lg"
+													className="btn btn-primary btn-lg pt-3"
 													id="submitbtn"
 													name="submit"
 													onClick={() => actions.loginUser()}>
