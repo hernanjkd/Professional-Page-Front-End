@@ -1,5 +1,6 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica, Arial;
+    font-weight: normal;
 }
 
 .bg-white {
@@ -39,4 +40,15 @@ footer a {
 .jumbotron {
     margin: 0;
     padding: 4em 0;
+}
+.img-thumbnail{
+    height: 300px;
+    width: 500px;
+}
+.paragrafo{
+    text-align: justify;
+}
+
+img {
+    border: 0;
 }

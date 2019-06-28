@@ -77,13 +77,21 @@ export class Login extends React.Component {
 							<div className="col">
 								<img
 									src="https://static1.squarespace.com/static/5604ac69e4b02c0c1c454aed/t/582f3ed0be65940ae0404f70/1479491298313/shutterstock_132019721.jpg?format=1500w"
-									className="img-thumbnail"
+									className="img-thumbnail border-0 p-0"
 									alt="Responsive image"
 								/>
 							</div>
-							<div className="col align-self-center">
-								<h1 className="display-4">EASILY SETUP YOUR PORTFOLIO PAGE</h1>
-								<p> </p>
+							<div className="col font-weight-light w-350px">
+								<h2 className="font-weight-light">Easily Setup your portfolio page</h2>
+								<h5 className="font-weight-light pagragrafo">
+									Once you’ve learned how to display a portoflio, you’ll never be far from a paycheck.
+								</h5>
+								<h5 className="font-weight-light pagragrafo">
+									We’re here to explain the ins and outs of showing your projects,
+								</h5>
+								<h5 className="font-weight-light pagragrafo">
+									so you can spend less time applying to jobs and more time making money.{" "}
+								</h5>
 								{/* <p className="lead">
 									This is a modified jumbotron that occupies the entire horizontal space of its
 									parent.
@@ -105,7 +113,7 @@ export class Login extends React.Component {
 							<div className="col">
 								<img
 									src="https://www.hlb.com.my/content/dam/hlb/my/images/Business/Homepage/business-homepage-connectfirst-tile.jpg"
-									className="img-thumbnail"
+									className="img-thumbnail p-0"
 									alt="Responsive image"
 								/>
 							</div>
@@ -158,20 +166,3 @@ export class Login extends React.Component {
 		);
 	}
 }
-
-// {
-// 	/*<Navbar className="bg-light justify-content-between">
-// 				<Form inline>
-// 					<InputGroup>
-// 						<InputGroup.Prepend>
-// 							<InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-// 						</InputGroup.Prepend>
-// 						<FormControl placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-// 					</InputGroup>
-// 				</Form>
-// 				<Form inline>
-// 					<FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-// 					<Button type="submit">Submit</Button>
-// 				</Form>
-// 			</Navbar>*/
-// }
