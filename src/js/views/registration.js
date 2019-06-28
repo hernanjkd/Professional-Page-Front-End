@@ -14,30 +14,16 @@ export const Registration = () => {
 							<div className="panel-heading pb-3" />
 							<div className="panel-body">
 								<div className="form-group">
-									<label htmlFor="fname">First Name</label>
+									<label htmlFor="fname">Full Name</label>
 									<input
 										type="text"
 										id="fname"
 										className="form-control"
 										name="fname"
-										placeholder="Example: John"
+										placeholder="Example: John Smith"
 									/>
 								</div>
-								<div className="form-group">
-									<label htmlFor="lname">Last Name</label>
-									<input
-										type="text"
-										id="lname"
-										className="form-control"
-										name="lname"
-										placeholder="Example: Doe"
-									/>
-								</div>
-								<div className="form-group">
-									<label htmlFor="birthDate">Date of Birth*</label>
 
-									<input type="date" id="birthDate" className="form-control" />
-								</div>
 								<div className="form-group">
 									<label htmlFor="emailaddr">Email Address</label>
 									<input
