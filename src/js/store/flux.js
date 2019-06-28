@@ -27,15 +27,15 @@ const getState = ({ getStore, setStore, getActions }) => {
 				store[category][index] = item;
 				setStore({ store });
 			},
-			deleteItem: (category, index) => {
+			deleteItem: (category, id) => {
 				const store = getStore();
-				store[category] = store[category].filter((item, i) => i != index);
+				store[category] = store[category].filter(item => id != item.id);
 				setStore({ store });
 			}
 		},
 		store: {
 			cardStyle: 0,
-			userLoggedIn: false,
+			userLoggedIn: true,
 			user: {
 				id: 1,
 				firstName: "Hernan",
@@ -96,70 +96,60 @@ const getState = ({ getStore, setStore, getActions }) => {
 				{
 					id: 1,
 					skill: "JavaScript",
-					level: 7,
 					resume: "true",
 					page: "true"
 				},
 				{
 					id: 2,
 					skill: "PHP",
-					level: 5,
 					resume: "false",
 					page: "true"
 				},
 				{
 					id: 3,
 					skill: "Java",
-					level: 5,
 					resume: "false",
 					page: "true"
 				},
 				{
 					id: 4,
 					skill: "Scheme",
-					level: 5,
 					resume: "false",
 					page: "false"
 				},
 				{
 					id: 5,
 					skill: "React",
-					level: 5,
 					resume: "true",
 					page: "true"
 				},
 				{
 					id: 6,
 					skill: "Python",
-					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
 					id: 7,
 					skill: "Git",
-					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
 					id: 8,
 					skill: "HTML",
-					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
 					id: 9,
 					skill: "Bootstrap",
-					level: 3,
 					resume: "true",
 					page: "false"
 				},
 				{
 					id: 10,
 					skill: "CSS",
-					level: 3,
 					resume: "true",
 					page: "false"
 				}

@@ -34,7 +34,7 @@ export class Page extends React.Component {
 
 					const name = store.user.firstName + " " + store.user.lastName;
 
-					const skills = store.skills;
+					const skills = store.skills.filter(item => item.page === "true");
 					const half = skills.length / 2;
 
 					// Contains the information for the user title, goals and skills
