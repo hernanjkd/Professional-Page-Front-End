@@ -26,13 +26,15 @@ const projectDescription = [
 		name: "Battleship",
 		Tools: "JavaScript · React · HTML · CSS",
 		imgUrl: Battleship,
-		Code: "https://github.com/hernanjkd/Battleship"
+		Code: "https://github.com/hernanjkd/Battleship",
+		Demo: ""
 	},
 	{
 		name: "Music Player",
 		Tools: "Bootstrap · JavaScript · API · CSS",
 		imgUrl: MusicPlayer,
-		Code: "https://github.com/hernanjkd/Music-Player"
+		Code: "https://github.com/hernanjkd/Music-Player",
+		Demo: "https://3000-bb00b7b4-bef3-414e-84f2-3a52d6ab27f3.ws-us0.gitpod.io/"
 	},
 	{
 		name: "Instagram Feed",

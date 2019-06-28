@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Context } from "../store/appContext";
+import Form from "react-bootstrap/Form";
 
 export const Registration = () => {
 	const [email, setEmail] = useState("");
@@ -54,6 +55,13 @@ export const Registration = () => {
 										placeholder=""
 									/>
 								</div>
+								<Form.Group controlId="formBasicChecbox">
+									<Form.Check
+										type="checkbox"
+										className="pt-3"
+										label="Agreed with the Terms and Conditions"
+									/>
+								</Form.Group>
 								<div className="form-group text-center">
 									<Context.Consumer>
 										{({ actions }) => {

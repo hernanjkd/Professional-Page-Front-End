@@ -4,7 +4,7 @@ import Team from "../../img/pwp-team.png";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar bg-white pb-5">
+		<nav className="navbar bg-white pb-5 sticky-top">
 			<img src={Logo} />
 			<img src={Team} />
 		</nav>
