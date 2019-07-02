@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../../styles/index.scss";
 import { Context } from "../store/appContext";
 import { SkillCard } from "../component/skillCard";
+import "../../styles/index.scss";
 
 export const Skills = () => {
 	const [editMode, setEditMode] = useState(false);
