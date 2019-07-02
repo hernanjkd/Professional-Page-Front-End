@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Form";
-import { Jumbotron } from "../component/Jumbotron";
 import { Context } from "../store/appContext";
 
 export class Login extends React.Component {
