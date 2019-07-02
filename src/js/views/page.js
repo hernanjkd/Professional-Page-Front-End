@@ -1,27 +1,19 @@
 import React from "react";
 import { Context } from "../store/appContext";
 import { Projects } from "../component/projects";
-import woodFrame from "../../img/wood-frame.jpeg";
 
 export class Page extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
+			store: null, 
 			content: null,
 			display: "objective"
 		};
 
 		this.contentDiv = React.createRef();
 		this.contentImg = React.createRef();
-	}
-
-	componentDidMount() {
-		// window.scrollTo(0, 0);
-		// const cd = this.contentDiv.current.clientHeight;
-		// const ci = this.contentImg.current.style;
-		// ci.height = cd - 50 + "px";
-		// ci.marginTop = "40px";
 	}
 
 	render() {
