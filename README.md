@@ -15,6 +15,3 @@ The resume builder program is used here to implement the resume section.
 
 ### Business Cards:
 The business cards are hard coded at the moment. They will populate with simple user information and different styles will be available to choose from.
-
-
-Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
