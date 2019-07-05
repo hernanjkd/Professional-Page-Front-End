@@ -7,7 +7,7 @@ export class Page extends React.Component {
 		super(props);
 
 		this.state = {
-			store: null, 
+			store: null,
 			content: null,
 			display: "objective"
 		};
@@ -91,7 +91,11 @@ export class Page extends React.Component {
 								<div className="col-1" />
 
 								<div className="col-3">
-									<img className="profile-image imgshadow" src={store.user.imageURL} alt={name} />
+									<img
+										className="profile-image imgshadow"
+										src="http://lorempixel.com/200/300/nature/2/"
+										alt={name}
+									/>
 								</div>
 								<div className="col-2" />
 								<div className="col-5 objective-div" ref={this.contentDiv}>
@@ -108,10 +112,6 @@ export class Page extends React.Component {
 								</div>
 							</div>
 							<div className="project-div row d-flex justify-content-around">
-								<img
-									className="project-background-img"
-									src="https://img.freepik.com/free-photo/old-wooden-texture-background-vintage_55716-1138.jpg?size=626&ext=jpg"
-								/>
 								<Projects />
 							</div>
 							<footer className="mt-auto py-5 text-center">
