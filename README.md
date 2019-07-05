@@ -1,7 +1,5 @@
 # Professional Page
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
-
 This program takes user information and automatically populates a resume, a portfolio page and business cards.
 
 ## The full project view:
