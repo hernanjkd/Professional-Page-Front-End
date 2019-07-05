@@ -16,8 +16,11 @@ The resume builder program is used here to implement the resume section.
 ### Business Cards:
 The business cards are hard coded at the moment. They will populate with simple user information and different styles will be available to choose from.
 
-![Landing Page](src/img/showLogin.gif)
+## Landing Page / Log in
+![](src/img/showLogin.gif)
 
-![Portfolio Page](src/img/showPage.gif)
+## Portfolio Page
+![](src/img/showPage.gif)
 
-![Resume](src/img/showResume.gif)
+## Resume Builder
+![](src/img/showResume.gif)
